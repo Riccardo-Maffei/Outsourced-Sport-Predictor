@@ -1,4 +1,4 @@
-name: sample
+name: Outsourced-Sport-Predictor.yml
 channels:
   - anaconda
   - conda-forge
