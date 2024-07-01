@@ -1,0 +1,9 @@
+Required Data:
+
+- Stats for single players
+- Stats for entire team
+
+
+Goals:
+
+- Win prediction with score
