@@ -130,3 +130,7 @@ dmypy.json
 
 # IDEA data
 .idea
+
+# Unpacked Datasets folders
+data_acquisition/euro_datasets
+data_acquisition/fifa_datasets
