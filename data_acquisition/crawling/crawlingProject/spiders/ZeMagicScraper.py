@@ -5,6 +5,66 @@ from bs4 import BeautifulSoup
 from scrapy.crawler import CrawlerProcess
 
 
+DEFAULT_HTML_LABEL_PROPERTIES = {'slot': 'stat-label'}
+DEFAULT_HTML_VALUE_PROPERTIES = {'slot': 'stat-value'}
+
+
+def scrape_pie_chart(soup,
+                     pie_chart_html_name='pk-donut-chart',
+                     primary_title_html_name='primary-text',
+                     secondary_title_html_name='secondary-text',
+                     labels_html_name='labels',
+                     series_html_name='series'):
+    pie_charts = soup.find_all(pie_chart_html_name)
+
+    pie_chart_results = {}
+
+    for pie_chart in pie_charts:
+        # Extract attributes
+        primary_text = pie_chart.get(primary_title_html_name)
+        secondary_text = pie_chart.get(secondary_title_html_name)
+
+        labels = json.loads(pie_chart[labels_html_name])
+        series = json.loads(pie_chart[series_html_name])
+
+        title = primary_text + " " + secondary_text
+
+        pie_chart_results[title] = {label: serie for label, serie in zip(labels, series)}
+
+    return pie_chart_results
+
+
+def scrape_label_value_pair(soup,
+                            html_label_tag='div',
+                            html_value_tag='div',
+                            html_label_properties=None,
+                            html_value_properties=None):
+
+    # Use the default values if none are provided
+    if html_label_properties is None:
+        html_label_properties = DEFAULT_HTML_LABEL_PROPERTIES
+    if html_value_properties is None:
+        html_value_properties = DEFAULT_HTML_VALUE_PROPERTIES
+
+    stat_label = soup.find(html_label_tag, html_label_properties).text.strip()
+    stat_value = soup.find(html_value_tag, html_value_properties).text.strip()
+
+    if isinstance(stat_value, str):
+        if stat_value.__contains__('%'):
+            stat_value = float(stat_value.replace('%', '')) / 100
+
+        elif stat_value.__contains__('/'):
+            values_to_divide = stat_value.split('/')
+
+            values_to_divide = [float(value) for value in values_to_divide]
+
+            stat_value = values_to_divide[0] / values_to_divide[1]
+
+        stat_value = float(stat_value)
+
+    return stat_label, stat_value
+
+
 def parse_team(response):
     team_name = response.meta['team_name']
     team_url = response.meta['team_url']
@@ -12,20 +72,14 @@ def parse_team(response):
     html = response.text
     soup = BeautifulSoup(html, 'html.parser')
 
-    won_draw_lost_pie_charts = soup.find_all('pk-donut-chart')
-    match_results = {}
-
-    for won_draw_lost_pie_chart in won_draw_lost_pie_charts:
-        scores = json.loads(won_draw_lost_pie_chart['series'])
-        labels = json.loads(won_draw_lost_pie_chart['labels'])
-        match_results = {label: score for label, score in zip(labels, scores)}
+    # Pie Chart Scraping
+    match_results = scrape_pie_chart(soup)
 
     numerical_stats = soup.find_all('pk-num-stat-item')
     team_stats = {}
 
     for numerical_stat in numerical_stats:
-        stat_value = numerical_stat.find('div', {'slot': 'stat-value'}).text.strip()
-        stat_label = numerical_stat.find('div', {'slot': 'stat-label'}).text.strip()
+        stat_label, stat_value = scrape_label_value_pair(numerical_stat)
 
         team_stats[stat_label] = stat_value
 
@@ -64,37 +118,12 @@ def parse_team_advanced(response):
         stat_title = stats_type.find('h2')
         stats = {}
 
-        pie_charts = soup.find_all('pk-donut-chart')
+        stats = {**stats, **scrape_pie_chart(stats_type)}
 
-        for pie_chart in pie_charts:
-            scores = json.loads(pie_chart['series'])
-            labels = json.loads(pie_chart['labels'])
-
-            for label, score in zip(labels, scores):
-                stats[label] = score
-
-        numerical_stats_source = soup.find_all('pk-num-stat-item')
+        numerical_stats_source = stats_type.find_all('pk-num-stat-item')
 
         for numerical_stat in numerical_stats_source:
-            stat_value = numerical_stat.find('div', {'slot': 'stat-value'}).text.strip()
-            stat_label = numerical_stat.find('div', {'slot': 'stat-label'}).text.strip()
-
-            if isinstance(stat_value, str):
-                original_stat = stat_value
-
-                if stat_value.__contains__('%'):
-                    stat_value = float(stat_value.replace('%', '')) / 100
-
-                elif stat_value.__contains__('/'):
-                    values_to_divide = stat_value.split('/')
-
-                    values_to_divide = [float(value) for value in values_to_divide]
-
-                    stat_value = values_to_divide[0] / values_to_divide[1]
-
-                print("Parsing " + str(original_stat) + " to " + str(float(stat_value)))
-
-                stat_value = float(stat_value)
+            stat_label, stat_value = scrape_label_value_pair(numerical_stat)
 
             stats[stat_label] = stat_value
 
@@ -120,7 +149,7 @@ class ExampleSpider(scrapy.Spider):
 
         teams = soup.find_all('div', class_='team team-is-team')
 
-        for team in teams[:1]:
+        for team in teams:
             team_name = team.find('a', class_='team-wrap').text.strip()
 
             team_url = team.find('a')['href']
