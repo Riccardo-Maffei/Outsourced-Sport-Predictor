@@ -134,3 +134,6 @@ dmypy.json
 # Unpacked Datasets folders
 data_acquisition/euro_datasets
 data_acquisition/fifa_datasets
+
+# Backup files
+*.bkp
