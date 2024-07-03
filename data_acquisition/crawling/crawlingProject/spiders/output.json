@@ -2,1237 +2,457 @@
 {
     "Team Name": "England",
     "URL": "https://www.uefa.com/euro2024/teams/39--england/",
-    "Match Results": {
+    "Match Overview": {
         "Won": 2,
         "Drawn": 2,
         "Lost": 0
     },
-    "Team statistics": [
-        {
-            "Goals": "4"
-        },
-        {
-            "Goals conceded": "2"
-        },
-        {
-            "Possession (%)": "60.5%"
-        },
-        {
-            "Passing accuracy (%)": "89.5%"
-        },
-        {
-            "Balls recovered": "157"
-        },
-        {
-            "Tackles won": "22"
-        },
-        {
-            "Clean sheets": "2"
-        },
-        {
-            "Saves": "10"
-        },
-        {
-            "Distance covered (km)": "487.55"
-        },
-        {
-            "Yellow cards": "7"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Norway",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/101--norway/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "San Marino",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/50168--san-marino/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Northern Ireland",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/63--northern-ireland/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Republic of Ireland",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/64--republic-of-ireland/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Moldova",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/57160--moldova/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Liechtenstein",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/81--liechtenstein/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "North Macedonia",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/59205--north-macedonia/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Kosovo",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/2608110--kosovo/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Montenegro",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/92853--montenegro/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Malta",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/88--malta/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Faroe Islands",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/51218--faroe-islands/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Gibraltar",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/94080--gibraltar/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Sweden",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/127--sweden/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Latvia",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/56558--latvia/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Lithuania",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/56557--lithuania/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Azerbaijan",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/57154--azerbaijan/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Belarus",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/57155--belarus/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Cyprus",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/33--cyprus/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Israel",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/65--israel/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Kazakhstan",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/65146--kazakhstan/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Armenia",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/57419--armenia/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Bosnia and Herzegovina",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/60094--bosnia-and-herzegovina/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Bulgaria",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/20--bulgaria/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Estonia",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/56556--estonia/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Wales",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/144--wales/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Finland",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/42--finland/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Poland",
-    "URL": "https://www.uefa.com/euro2024/teams/109--poland/",
-    "Match Results": {
-        "Won": 0,
-        "Drawn": 1,
-        "Lost": 2
+    "Basic statistics": {
+        "Goals": "4",
+        "Goals conceded": "2",
+        "Possession (%)": "60.5%",
+        "Passing accuracy (%)": "89.5%",
+        "Balls recovered": "157",
+        "Tackles won": "22",
+        "Clean sheets": "2",
+        "Saves": "10",
+        "Distance covered (km)": "487.55",
+        "Yellow cards": "7",
+        "Red cards": "0"
     },
-    "Team statistics": [
-        {
-            "Goals": "3"
+    "Advanced Statistics": {
+        "Key stats": {
+            "Won": 2,
+            "Drawn": 2,
+            "Lost": 0,
+            "Goals inside area": 4,
+            "Goals outside area": 0,
+            "Attempts on target": 12,
+            "Attempts off target": 18,
+            "Blocked": 14,
+            "Crossbar": 0,
+            "Post": 2,
+            "Tackles won": 22.0,
+            "Tackles lost": 25,
+            "Goals": 4.0,
+            "Goals conceded": 2.0,
+            "Possession (%)": 0.605,
+            "Passing accuracy (%)": 0.895,
+            "Balls recovered": 157.0,
+            "Clean sheets": 2.0,
+            "Saves": 10.0,
+            "Distance covered (km)": 487.55,
+            "Yellow cards": 7.0,
+            "Red cards": 0.0,
+            "Right foot": 1.0,
+            "Left foot": 1.0,
+            "Head": 2.0,
+            "Other": 0.0,
+            "Own goals for": 0.0,
+            "Assists": 3.0,
+            "Attacks": 193.0,
+            "Clear chances": 1.0,
+            "Penalties scored": 0.0,
+            "Penalties missed": 0.0,
+            "Penalties awarded": 0.0,
+            "Corners taken": 18.0,
+            "Offsides": 4.0,
+            "Dribbles": 74.0,
+            "Runs into attacking third": 54.0,
+            "Runs into key play area": 54.0,
+            "Runs into penalty area": 19.0,
+            "Passes completed": 0.8932791728212703,
+            "Short passes completed": 0.8683385579937304,
+            "Medium passes completed": 0.9376739009460211,
+            "Long passes completed": 0.6593406593406593,
+            "Backward passes completed": 0.9650205761316872,
+            "Passes completed to left": 0.9335142469470827,
+            "Passes completed to right": 0.9420485175202157,
+            "Crossing accuracy (%)": 0.2657,
+            "Crosses completed": 0.265625,
+            "Free-kicks taken": 66.0,
+            "Times in possession": 697.0,
+            "Passes into attacking third": 177.0,
+            "Passes into key play area": 123.0,
+            "Passes into penalty area": 51.0,
+            "Blocks": 13.0,
+            "Own goals conceded": 0.0,
+            "Penalties conceded": 0.0,
+            "Clearances completed": 0.7708333333333334,
+            "Attempts conceded off target": 15.0,
+            "Attempts conceded on target": 12.0,
+            "Saves from direct free-kicks": 0.0,
+            "Saves from indirect free-kicks": 0.0,
+            "Saves from penalties": 0.0,
+            "Claims": 9.0,
+            "High claims": 2.0,
+            "Low claims": 7.0,
+            "Punches made": 2.0,
+            "Fouls committed": 36.0,
+            "Fouls committed in defensive third": 5.0,
+            "Fouls committed in own half": 13.0,
+            "Fouls suffered": 60.0
         },
-        {
-            "Goals conceded": "6"
+        "Attacking": {
+            "Won": 2,
+            "Drawn": 2,
+            "Lost": 0,
+            "Goals inside area": 4,
+            "Goals outside area": 0,
+            "Attempts on target": 12,
+            "Attempts off target": 18,
+            "Blocked": 14,
+            "Crossbar": 0,
+            "Post": 2,
+            "Tackles won": 22.0,
+            "Tackles lost": 25,
+            "Goals": 4.0,
+            "Goals conceded": 2.0,
+            "Possession (%)": 0.605,
+            "Passing accuracy (%)": 0.895,
+            "Balls recovered": 157.0,
+            "Clean sheets": 2.0,
+            "Saves": 10.0,
+            "Distance covered (km)": 487.55,
+            "Yellow cards": 7.0,
+            "Red cards": 0.0,
+            "Right foot": 1.0,
+            "Left foot": 1.0,
+            "Head": 2.0,
+            "Other": 0.0,
+            "Own goals for": 0.0,
+            "Assists": 3.0,
+            "Attacks": 193.0,
+            "Clear chances": 1.0,
+            "Penalties scored": 0.0,
+            "Penalties missed": 0.0,
+            "Penalties awarded": 0.0,
+            "Corners taken": 18.0,
+            "Offsides": 4.0,
+            "Dribbles": 74.0,
+            "Runs into attacking third": 54.0,
+            "Runs into key play area": 54.0,
+            "Runs into penalty area": 19.0,
+            "Passes completed": 0.8932791728212703,
+            "Short passes completed": 0.8683385579937304,
+            "Medium passes completed": 0.9376739009460211,
+            "Long passes completed": 0.6593406593406593,
+            "Backward passes completed": 0.9650205761316872,
+            "Passes completed to left": 0.9335142469470827,
+            "Passes completed to right": 0.9420485175202157,
+            "Crossing accuracy (%)": 0.2657,
+            "Crosses completed": 0.265625,
+            "Free-kicks taken": 66.0,
+            "Times in possession": 697.0,
+            "Passes into attacking third": 177.0,
+            "Passes into key play area": 123.0,
+            "Passes into penalty area": 51.0,
+            "Blocks": 13.0,
+            "Own goals conceded": 0.0,
+            "Penalties conceded": 0.0,
+            "Clearances completed": 0.7708333333333334,
+            "Attempts conceded off target": 15.0,
+            "Attempts conceded on target": 12.0,
+            "Saves from direct free-kicks": 0.0,
+            "Saves from indirect free-kicks": 0.0,
+            "Saves from penalties": 0.0,
+            "Claims": 9.0,
+            "High claims": 2.0,
+            "Low claims": 7.0,
+            "Punches made": 2.0,
+            "Fouls committed": 36.0,
+            "Fouls committed in defensive third": 5.0,
+            "Fouls committed in own half": 13.0,
+            "Fouls suffered": 60.0
         },
-        {
-            "Possession (%)": "41%"
+        "Distribution": {
+            "Won": 2,
+            "Drawn": 2,
+            "Lost": 0,
+            "Goals inside area": 4,
+            "Goals outside area": 0,
+            "Attempts on target": 12,
+            "Attempts off target": 18,
+            "Blocked": 14,
+            "Crossbar": 0,
+            "Post": 2,
+            "Tackles won": 22.0,
+            "Tackles lost": 25,
+            "Goals": 4.0,
+            "Goals conceded": 2.0,
+            "Possession (%)": 0.605,
+            "Passing accuracy (%)": 0.895,
+            "Balls recovered": 157.0,
+            "Clean sheets": 2.0,
+            "Saves": 10.0,
+            "Distance covered (km)": 487.55,
+            "Yellow cards": 7.0,
+            "Red cards": 0.0,
+            "Right foot": 1.0,
+            "Left foot": 1.0,
+            "Head": 2.0,
+            "Other": 0.0,
+            "Own goals for": 0.0,
+            "Assists": 3.0,
+            "Attacks": 193.0,
+            "Clear chances": 1.0,
+            "Penalties scored": 0.0,
+            "Penalties missed": 0.0,
+            "Penalties awarded": 0.0,
+            "Corners taken": 18.0,
+            "Offsides": 4.0,
+            "Dribbles": 74.0,
+            "Runs into attacking third": 54.0,
+            "Runs into key play area": 54.0,
+            "Runs into penalty area": 19.0,
+            "Passes completed": 0.8932791728212703,
+            "Short passes completed": 0.8683385579937304,
+            "Medium passes completed": 0.9376739009460211,
+            "Long passes completed": 0.6593406593406593,
+            "Backward passes completed": 0.9650205761316872,
+            "Passes completed to left": 0.9335142469470827,
+            "Passes completed to right": 0.9420485175202157,
+            "Crossing accuracy (%)": 0.2657,
+            "Crosses completed": 0.265625,
+            "Free-kicks taken": 66.0,
+            "Times in possession": 697.0,
+            "Passes into attacking third": 177.0,
+            "Passes into key play area": 123.0,
+            "Passes into penalty area": 51.0,
+            "Blocks": 13.0,
+            "Own goals conceded": 0.0,
+            "Penalties conceded": 0.0,
+            "Clearances completed": 0.7708333333333334,
+            "Attempts conceded off target": 15.0,
+            "Attempts conceded on target": 12.0,
+            "Saves from direct free-kicks": 0.0,
+            "Saves from indirect free-kicks": 0.0,
+            "Saves from penalties": 0.0,
+            "Claims": 9.0,
+            "High claims": 2.0,
+            "Low claims": 7.0,
+            "Punches made": 2.0,
+            "Fouls committed": 36.0,
+            "Fouls committed in defensive third": 5.0,
+            "Fouls committed in own half": 13.0,
+            "Fouls suffered": 60.0
         },
-        {
-            "Passing accuracy (%)": "82.67%"
+        "Defending": {
+            "Won": 2,
+            "Drawn": 2,
+            "Lost": 0,
+            "Goals inside area": 4,
+            "Goals outside area": 0,
+            "Attempts on target": 12,
+            "Attempts off target": 18,
+            "Blocked": 14,
+            "Crossbar": 0,
+            "Post": 2,
+            "Tackles won": 22.0,
+            "Tackles lost": 25,
+            "Goals": 4.0,
+            "Goals conceded": 2.0,
+            "Possession (%)": 0.605,
+            "Passing accuracy (%)": 0.895,
+            "Balls recovered": 157.0,
+            "Clean sheets": 2.0,
+            "Saves": 10.0,
+            "Distance covered (km)": 487.55,
+            "Yellow cards": 7.0,
+            "Red cards": 0.0,
+            "Right foot": 1.0,
+            "Left foot": 1.0,
+            "Head": 2.0,
+            "Other": 0.0,
+            "Own goals for": 0.0,
+            "Assists": 3.0,
+            "Attacks": 193.0,
+            "Clear chances": 1.0,
+            "Penalties scored": 0.0,
+            "Penalties missed": 0.0,
+            "Penalties awarded": 0.0,
+            "Corners taken": 18.0,
+            "Offsides": 4.0,
+            "Dribbles": 74.0,
+            "Runs into attacking third": 54.0,
+            "Runs into key play area": 54.0,
+            "Runs into penalty area": 19.0,
+            "Passes completed": 0.8932791728212703,
+            "Short passes completed": 0.8683385579937304,
+            "Medium passes completed": 0.9376739009460211,
+            "Long passes completed": 0.6593406593406593,
+            "Backward passes completed": 0.9650205761316872,
+            "Passes completed to left": 0.9335142469470827,
+            "Passes completed to right": 0.9420485175202157,
+            "Crossing accuracy (%)": 0.2657,
+            "Crosses completed": 0.265625,
+            "Free-kicks taken": 66.0,
+            "Times in possession": 697.0,
+            "Passes into attacking third": 177.0,
+            "Passes into key play area": 123.0,
+            "Passes into penalty area": 51.0,
+            "Blocks": 13.0,
+            "Own goals conceded": 0.0,
+            "Penalties conceded": 0.0,
+            "Clearances completed": 0.7708333333333334,
+            "Attempts conceded off target": 15.0,
+            "Attempts conceded on target": 12.0,
+            "Saves from direct free-kicks": 0.0,
+            "Saves from indirect free-kicks": 0.0,
+            "Saves from penalties": 0.0,
+            "Claims": 9.0,
+            "High claims": 2.0,
+            "Low claims": 7.0,
+            "Punches made": 2.0,
+            "Fouls committed": 36.0,
+            "Fouls committed in defensive third": 5.0,
+            "Fouls committed in own half": 13.0,
+            "Fouls suffered": 60.0
         },
-        {
-            "Balls recovered": "105"
+        "Goalkeeping": {
+            "Won": 2,
+            "Drawn": 2,
+            "Lost": 0,
+            "Goals inside area": 4,
+            "Goals outside area": 0,
+            "Attempts on target": 12,
+            "Attempts off target": 18,
+            "Blocked": 14,
+            "Crossbar": 0,
+            "Post": 2,
+            "Tackles won": 22.0,
+            "Tackles lost": 25,
+            "Goals": 4.0,
+            "Goals conceded": 2.0,
+            "Possession (%)": 0.605,
+            "Passing accuracy (%)": 0.895,
+            "Balls recovered": 157.0,
+            "Clean sheets": 2.0,
+            "Saves": 10.0,
+            "Distance covered (km)": 487.55,
+            "Yellow cards": 7.0,
+            "Red cards": 0.0,
+            "Right foot": 1.0,
+            "Left foot": 1.0,
+            "Head": 2.0,
+            "Other": 0.0,
+            "Own goals for": 0.0,
+            "Assists": 3.0,
+            "Attacks": 193.0,
+            "Clear chances": 1.0,
+            "Penalties scored": 0.0,
+            "Penalties missed": 0.0,
+            "Penalties awarded": 0.0,
+            "Corners taken": 18.0,
+            "Offsides": 4.0,
+            "Dribbles": 74.0,
+            "Runs into attacking third": 54.0,
+            "Runs into key play area": 54.0,
+            "Runs into penalty area": 19.0,
+            "Passes completed": 0.8932791728212703,
+            "Short passes completed": 0.8683385579937304,
+            "Medium passes completed": 0.9376739009460211,
+            "Long passes completed": 0.6593406593406593,
+            "Backward passes completed": 0.9650205761316872,
+            "Passes completed to left": 0.9335142469470827,
+            "Passes completed to right": 0.9420485175202157,
+            "Crossing accuracy (%)": 0.2657,
+            "Crosses completed": 0.265625,
+            "Free-kicks taken": 66.0,
+            "Times in possession": 697.0,
+            "Passes into attacking third": 177.0,
+            "Passes into key play area": 123.0,
+            "Passes into penalty area": 51.0,
+            "Blocks": 13.0,
+            "Own goals conceded": 0.0,
+            "Penalties conceded": 0.0,
+            "Clearances completed": 0.7708333333333334,
+            "Attempts conceded off target": 15.0,
+            "Attempts conceded on target": 12.0,
+            "Saves from direct free-kicks": 0.0,
+            "Saves from indirect free-kicks": 0.0,
+            "Saves from penalties": 0.0,
+            "Claims": 9.0,
+            "High claims": 2.0,
+            "Low claims": 7.0,
+            "Punches made": 2.0,
+            "Fouls committed": 36.0,
+            "Fouls committed in defensive third": 5.0,
+            "Fouls committed in own half": 13.0,
+            "Fouls suffered": 60.0
         },
-        {
-            "Tackles won": "15"
-        },
-        {
-            "Clean sheets": "0"
-        },
-        {
-            "Saves": "16"
-        },
-        {
-            "Distance covered (km)": "338.83"
-        },
-        {
-            "Yellow cards": "8"
-        },
-        {
-            "Red cards": "0"
+        "Disciplinary": {
+            "Won": 2,
+            "Drawn": 2,
+            "Lost": 0,
+            "Goals inside area": 4,
+            "Goals outside area": 0,
+            "Attempts on target": 12,
+            "Attempts off target": 18,
+            "Blocked": 14,
+            "Crossbar": 0,
+            "Post": 2,
+            "Tackles won": 22.0,
+            "Tackles lost": 25,
+            "Goals": 4.0,
+            "Goals conceded": 2.0,
+            "Possession (%)": 0.605,
+            "Passing accuracy (%)": 0.895,
+            "Balls recovered": 157.0,
+            "Clean sheets": 2.0,
+            "Saves": 10.0,
+            "Distance covered (km)": 487.55,
+            "Yellow cards": 7.0,
+            "Red cards": 0.0,
+            "Right foot": 1.0,
+            "Left foot": 1.0,
+            "Head": 2.0,
+            "Other": 0.0,
+            "Own goals for": 0.0,
+            "Assists": 3.0,
+            "Attacks": 193.0,
+            "Clear chances": 1.0,
+            "Penalties scored": 0.0,
+            "Penalties missed": 0.0,
+            "Penalties awarded": 0.0,
+            "Corners taken": 18.0,
+            "Offsides": 4.0,
+            "Dribbles": 74.0,
+            "Runs into attacking third": 54.0,
+            "Runs into key play area": 54.0,
+            "Runs into penalty area": 19.0,
+            "Passes completed": 0.8932791728212703,
+            "Short passes completed": 0.8683385579937304,
+            "Medium passes completed": 0.9376739009460211,
+            "Long passes completed": 0.6593406593406593,
+            "Backward passes completed": 0.9650205761316872,
+            "Passes completed to left": 0.9335142469470827,
+            "Passes completed to right": 0.9420485175202157,
+            "Crossing accuracy (%)": 0.2657,
+            "Crosses completed": 0.265625,
+            "Free-kicks taken": 66.0,
+            "Times in possession": 697.0,
+            "Passes into attacking third": 177.0,
+            "Passes into key play area": 123.0,
+            "Passes into penalty area": 51.0,
+            "Blocks": 13.0,
+            "Own goals conceded": 0.0,
+            "Penalties conceded": 0.0,
+            "Clearances completed": 0.7708333333333334,
+            "Attempts conceded off target": 15.0,
+            "Attempts conceded on target": 12.0,
+            "Saves from direct free-kicks": 0.0,
+            "Saves from indirect free-kicks": 0.0,
+            "Saves from penalties": 0.0,
+            "Claims": 9.0,
+            "High claims": 2.0,
+            "Low claims": 7.0,
+            "Punches made": 2.0,
+            "Fouls committed": 36.0,
+            "Fouls committed in defensive third": 5.0,
+            "Fouls committed in own half": 13.0,
+            "Fouls suffered": 60.0
         }
-    ]
-},
-{
-    "Team Name": "Luxembourg",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/82--luxembourg/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Hungary",
-    "URL": "https://www.uefa.com/euro2024/teams/57--hungary/",
-    "Match Results": {
-        "Won": 1,
-        "Drawn": 0,
-        "Lost": 2
-    },
-    "Team statistics": [
-        {
-            "Goals": "2"
-        },
-        {
-            "Goals conceded": "5"
-        },
-        {
-            "Possession (%)": "41.34%"
-        },
-        {
-            "Passing accuracy (%)": "81.34%"
-        },
-        {
-            "Balls recovered": "95"
-        },
-        {
-            "Tackles won": "15"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "9"
-        },
-        {
-            "Distance covered (km)": "339.26"
-        },
-        {
-            "Yellow cards": "10"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Croatia",
-    "URL": "https://www.uefa.com/euro2024/teams/56370--croatia/",
-    "Match Results": {
-        "Won": 0,
-        "Drawn": 2,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "3"
-        },
-        {
-            "Goals conceded": "6"
-        },
-        {
-            "Possession (%)": "55.34%"
-        },
-        {
-            "Passing accuracy (%)": "89.34%"
-        },
-        {
-            "Balls recovered": "126"
-        },
-        {
-            "Tackles won": "17"
-        },
-        {
-            "Clean sheets": "0"
-        },
-        {
-            "Saves": "9"
-        },
-        {
-            "Distance covered (km)": "356.71"
-        },
-        {
-            "Yellow cards": "7"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Greece",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/49--greece/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "T\u00fcrkiye",
-    "URL": "https://www.uefa.com/euro2024/teams/135--turkiye/",
-    "Match Results": {
-        "Won": 2,
-        "Drawn": 0,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "5"
-        },
-        {
-            "Goals conceded": "5"
-        },
-        {
-            "Possession (%)": "52.67%"
-        },
-        {
-            "Passing accuracy (%)": "88.34%"
-        },
-        {
-            "Balls recovered": "108"
-        },
-        {
-            "Tackles won": "20"
-        },
-        {
-            "Clean sheets": "0"
-        },
-        {
-            "Saves": "9"
-        },
-        {
-            "Distance covered (km)": "338.8"
-        },
-        {
-            "Yellow cards": "16"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Scotland",
-    "URL": "https://www.uefa.com/euro2024/teams/117--scotland/",
-    "Match Results": {
-        "Won": 0,
-        "Drawn": 1,
-        "Lost": 2
-    },
-    "Team statistics": [
-        {
-            "Goals": "2"
-        },
-        {
-            "Goals conceded": "7"
-        },
-        {
-            "Possession (%)": "46.34%"
-        },
-        {
-            "Passing accuracy (%)": "80.67%"
-        },
-        {
-            "Balls recovered": "91"
-        },
-        {
-            "Tackles won": "10"
-        },
-        {
-            "Clean sheets": "0"
-        },
-        {
-            "Saves": "12"
-        },
-        {
-            "Distance covered (km)": "334.93"
-        },
-        {
-            "Yellow cards": "5"
-        },
-        {
-            "Red cards": "1"
-        }
-    ]
-},
-{
-    "Team Name": "Ukraine",
-    "URL": "https://www.uefa.com/euro2024/teams/57166--ukraine/",
-    "Match Results": {
-        "Won": 1,
-        "Drawn": 1,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "2"
-        },
-        {
-            "Goals conceded": "4"
-        },
-        {
-            "Possession (%)": "52%"
-        },
-        {
-            "Passing accuracy (%)": "87.34%"
-        },
-        {
-            "Balls recovered": "106"
-        },
-        {
-            "Tackles won": "21"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "10"
-        },
-        {
-            "Distance covered (km)": "343.49"
-        },
-        {
-            "Yellow cards": "3"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Albania",
-    "URL": "https://www.uefa.com/euro2024/teams/2--albania/",
-    "Match Results": {
-        "Won": 0,
-        "Drawn": 1,
-        "Lost": 2
-    },
-    "Team statistics": [
-        {
-            "Goals": "3"
-        },
-        {
-            "Goals conceded": "5"
-        },
-        {
-            "Possession (%)": "38%"
-        },
-        {
-            "Passing accuracy (%)": "84.34%"
-        },
-        {
-            "Balls recovered": "115"
-        },
-        {
-            "Tackles won": "14"
-        },
-        {
-            "Clean sheets": "0"
-        },
-        {
-            "Saves": "9"
-        },
-        {
-            "Distance covered (km)": "347.48"
-        },
-        {
-            "Yellow cards": "7"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Serbia",
-    "URL": "https://www.uefa.com/euro2024/teams/147--serbia/",
-    "Match Results": {
-        "Won": 0,
-        "Drawn": 2,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "1"
-        },
-        {
-            "Goals conceded": "2"
-        },
-        {
-            "Possession (%)": "51.34%"
-        },
-        {
-            "Passing accuracy (%)": "87.67%"
-        },
-        {
-            "Balls recovered": "110"
-        },
-        {
-            "Tackles won": "15"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "8"
-        },
-        {
-            "Distance covered (km)": "340.71"
-        },
-        {
-            "Yellow cards": "9"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Romania",
-    "URL": "https://www.uefa.com/euro2024/teams/113--romania/",
-    "Match Results": {
-        "Won": 1,
-        "Drawn": 1,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "4"
-        },
-        {
-            "Goals conceded": "3"
-        },
-        {
-            "Possession (%)": "41.34%"
-        },
-        {
-            "Passing accuracy (%)": "77%"
-        },
-        {
-            "Balls recovered": "93"
-        },
-        {
-            "Tackles won": "8"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "13"
-        },
-        {
-            "Distance covered (km)": "333.86"
-        },
-        {
-            "Yellow cards": "7"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Netherlands",
-    "URL": "https://www.uefa.com/euro2024/teams/95--netherlands/",
-    "Match Results": {
-        "Won": 1,
-        "Drawn": 1,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "4"
-        },
-        {
-            "Goals conceded": "4"
-        },
-        {
-            "Possession (%)": "53%"
-        },
-        {
-            "Passing accuracy (%)": "88%"
-        },
-        {
-            "Balls recovered": "94"
-        },
-        {
-            "Tackles won": "16"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "12"
-        },
-        {
-            "Distance covered (km)": "324.36"
-        },
-        {
-            "Yellow cards": "2"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Czechia",
-    "URL": "https://www.uefa.com/euro2024/teams/58837--czechia/",
-    "Match Results": {
-        "Won": 0,
-        "Drawn": 1,
-        "Lost": 2
-    },
-    "Team statistics": [
-        {
-            "Goals": "3"
-        },
-        {
-            "Goals conceded": "5"
-        },
-        {
-            "Possession (%)": "41.34%"
-        },
-        {
-            "Passing accuracy (%)": "76.34%"
-        },
-        {
-            "Balls recovered": "104"
-        },
-        {
-            "Tackles won": "19"
-        },
-        {
-            "Clean sheets": "0"
-        },
-        {
-            "Saves": "10"
-        },
-        {
-            "Distance covered (km)": "351.46"
-        },
-        {
-            "Yellow cards": "13"
-        },
-        {
-            "Red cards": "2"
-        }
-    ]
-},
-{
-    "Team Name": "Belgium",
-    "URL": "https://www.uefa.com/euro2024/teams/13--belgium/",
-    "Match Results": {
-        "Won": 1,
-        "Drawn": 1,
-        "Lost": 2
-    },
-    "Team statistics": [
-        {
-            "Goals": "2"
-        },
-        {
-            "Goals conceded": "2"
-        },
-        {
-            "Possession (%)": "53.75%"
-        },
-        {
-            "Passing accuracy (%)": "87.75%"
-        },
-        {
-            "Balls recovered": "130"
-        },
-        {
-            "Tackles won": "28"
-        },
-        {
-            "Clean sheets": "2"
-        },
-        {
-            "Saves": "14"
-        },
-        {
-            "Distance covered (km)": "439.87"
-        },
-        {
-            "Yellow cards": "8"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Slovenia",
-    "URL": "https://www.uefa.com/euro2024/teams/57163--slovenia/",
-    "Match Results": {
-        "Won": 0,
-        "Drawn": 4,
-        "Lost": 0
-    },
-    "Team statistics": [
-        {
-            "Goals": "2"
-        },
-        {
-            "Goals conceded": "2"
-        },
-        {
-            "Possession (%)": "35.5%"
-        },
-        {
-            "Passing accuracy (%)": "75%"
-        },
-        {
-            "Balls recovered": "172"
-        },
-        {
-            "Tackles won": "35"
-        },
-        {
-            "Clean sheets": "2"
-        },
-        {
-            "Saves": "14"
-        },
-        {
-            "Distance covered (km)": "490.93"
-        },
-        {
-            "Yellow cards": "11"
-        },
-        {
-            "Red cards": "1"
-        }
-    ]
-},
-{
-    "Team Name": "Andorra",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/60618--andorra/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Iceland",
-    "URL": "https://www.uefa.com/european-qualifiers/teams/58--iceland/",
-    "Match Results": {},
-    "Team statistics": []
-},
-{
-    "Team Name": "Austria",
-    "URL": "https://www.uefa.com/euro2024/teams/8--austria/",
-    "Match Results": {
-        "Won": 2,
-        "Drawn": 0,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "6"
-        },
-        {
-            "Goals conceded": "4"
-        },
-        {
-            "Possession (%)": "51.67%"
-        },
-        {
-            "Passing accuracy (%)": "84.67%"
-        },
-        {
-            "Balls recovered": "132"
-        },
-        {
-            "Tackles won": "13"
-        },
-        {
-            "Clean sheets": "0"
-        },
-        {
-            "Saves": "5"
-        },
-        {
-            "Distance covered (km)": "344.13"
-        },
-        {
-            "Yellow cards": "10"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Switzerland",
-    "URL": "https://www.uefa.com/euro2024/teams/128--switzerland/",
-    "Match Results": {
-        "Won": 2,
-        "Drawn": 2,
-        "Lost": 0
-    },
-    "Team statistics": [
-        {
-            "Goals": "7"
-        },
-        {
-            "Goals conceded": "3"
-        },
-        {
-            "Possession (%)": "48%"
-        },
-        {
-            "Passing accuracy (%)": "85.25%"
-        },
-        {
-            "Balls recovered": "137"
-        },
-        {
-            "Tackles won": "10"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "6"
-        },
-        {
-            "Distance covered (km)": "451.94"
-        },
-        {
-            "Yellow cards": "8"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Slovakia",
-    "URL": "https://www.uefa.com/euro2024/teams/58836--slovakia/",
-    "Match Results": {
-        "Won": 1,
-        "Drawn": 1,
-        "Lost": 2
-    },
-    "Team statistics": [
-        {
-            "Goals": "4"
-        },
-        {
-            "Goals conceded": "5"
-        },
-        {
-            "Possession (%)": "47.5%"
-        },
-        {
-            "Passing accuracy (%)": "82.5%"
-        },
-        {
-            "Balls recovered": "158"
-        },
-        {
-            "Tackles won": "16"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "12"
-        },
-        {
-            "Distance covered (km)": "499.05"
-        },
-        {
-            "Yellow cards": "8"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Italy",
-    "URL": "https://www.uefa.com/euro2024/teams/66--italy/",
-    "Match Results": {
-        "Won": 1,
-        "Drawn": 1,
-        "Lost": 2
-    },
-    "Team statistics": [
-        {
-            "Goals": "3"
-        },
-        {
-            "Goals conceded": "5"
-        },
-        {
-            "Possession (%)": "52.5%"
-        },
-        {
-            "Passing accuracy (%)": "88.75%"
-        },
-        {
-            "Balls recovered": "137"
-        },
-        {
-            "Tackles won": "19"
-        },
-        {
-            "Clean sheets": "0"
-        },
-        {
-            "Saves": "14"
-        },
-        {
-            "Distance covered (km)": "465.87"
-        },
-        {
-            "Yellow cards": "10"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Portugal",
-    "URL": "https://www.uefa.com/euro2024/teams/110--portugal/",
-    "Match Results": {
-        "Won": 2,
-        "Drawn": 1,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "5"
-        },
-        {
-            "Goals conceded": "3"
-        },
-        {
-            "Possession (%)": "65.25%"
-        },
-        {
-            "Passing accuracy (%)": "89.5%"
-        },
-        {
-            "Balls recovered": "176"
-        },
-        {
-            "Tackles won": "22"
-        },
-        {
-            "Clean sheets": "2"
-        },
-        {
-            "Saves": "6"
-        },
-        {
-            "Distance covered (km)": "489.9"
-        },
-        {
-            "Yellow cards": "9"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Georgia",
-    "URL": "https://www.uefa.com/euro2024/teams/57157--georgia/",
-    "Match Results": {
-        "Won": 1,
-        "Drawn": 1,
-        "Lost": 2
-    },
-    "Team statistics": [
-        {
-            "Goals": "5"
-        },
-        {
-            "Goals conceded": "8"
-        },
-        {
-            "Possession (%)": "38.25%"
-        },
-        {
-            "Passing accuracy (%)": "81.5%"
-        },
-        {
-            "Balls recovered": "169"
-        },
-        {
-            "Tackles won": "34"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "29"
-        },
-        {
-            "Distance covered (km)": "448.54"
-        },
-        {
-            "Yellow cards": "7"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Germany",
-    "URL": "https://www.uefa.com/euro2024/teams/47--germany/",
-    "Match Results": {
-        "Won": 3,
-        "Drawn": 1,
-        "Lost": 0
-    },
-    "Team statistics": [
-        {
-            "Goals": "10"
-        },
-        {
-            "Goals conceded": "2"
-        },
-        {
-            "Possession (%)": "62%"
-        },
-        {
-            "Passing accuracy (%)": "92.25%"
-        },
-        {
-            "Balls recovered": "161"
-        },
-        {
-            "Tackles won": "17"
-        },
-        {
-            "Clean sheets": "2"
-        },
-        {
-            "Saves": "7"
-        },
-        {
-            "Distance covered (km)": "459.24"
-        },
-        {
-            "Yellow cards": "6"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Denmark",
-    "URL": "https://www.uefa.com/euro2024/teams/35--denmark/",
-    "Match Results": {
-        "Won": 0,
-        "Drawn": 3,
-        "Lost": 1
-    },
-    "Team statistics": [
-        {
-            "Goals": "2"
-        },
-        {
-            "Goals conceded": "4"
-        },
-        {
-            "Possession (%)": "50.5%"
-        },
-        {
-            "Passing accuracy (%)": "86.25%"
-        },
-        {
-            "Balls recovered": "171"
-        },
-        {
-            "Tackles won": "28"
-        },
-        {
-            "Clean sheets": "1"
-        },
-        {
-            "Saves": "12"
-        },
-        {
-            "Distance covered (km)": "451.23"
-        },
-        {
-            "Yellow cards": "9"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "France",
-    "URL": "https://www.uefa.com/euro2024/teams/43--france/",
-    "Match Results": {
-        "Won": 2,
-        "Drawn": 2,
-        "Lost": 0
-    },
-    "Team statistics": [
-        {
-            "Goals": "3"
-        },
-        {
-            "Goals conceded": "1"
-        },
-        {
-            "Possession (%)": "53.75%"
-        },
-        {
-            "Passing accuracy (%)": "90.5%"
-        },
-        {
-            "Balls recovered": "159"
-        },
-        {
-            "Tackles won": "17"
-        },
-        {
-            "Clean sheets": "3"
-        },
-        {
-            "Saves": "12"
-        },
-        {
-            "Distance covered (km)": "432.29"
-        },
-        {
-            "Yellow cards": "6"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
-},
-{
-    "Team Name": "Spain",
-    "URL": "https://www.uefa.com/euro2024/teams/122--spain/",
-    "Match Results": {
-        "Won": 4,
-        "Drawn": 0,
-        "Lost": 0
-    },
-    "Team statistics": [
-        {
-            "Goals": "9"
-        },
-        {
-            "Goals conceded": "1"
-        },
-        {
-            "Possession (%)": "58.5%"
-        },
-        {
-            "Passing accuracy (%)": "91%"
-        },
-        {
-            "Balls recovered": "165"
-        },
-        {
-            "Tackles won": "22"
-        },
-        {
-            "Clean sheets": "3"
-        },
-        {
-            "Saves": "10"
-        },
-        {
-            "Distance covered (km)": "467.28"
-        },
-        {
-            "Yellow cards": "6"
-        },
-        {
-            "Red cards": "0"
-        }
-    ]
+    }
 }
 ]
