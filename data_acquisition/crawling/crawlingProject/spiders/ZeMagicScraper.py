@@ -97,8 +97,7 @@ def parse_team(response):
 
     yield scrapy.Request(full_stats_url,
                          callback=parse_team_advanced,
-                         meta=
-                         {
+                         meta={
                              META_PARAMETERS_TEAM_NAME: team_name,
                              META_PARAMETERS_TEAM_URL: team_url,
                              META_PARAMETERS_MATCH_RESULTS: match_results,
