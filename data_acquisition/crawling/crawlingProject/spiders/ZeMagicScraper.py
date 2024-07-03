@@ -4,9 +4,13 @@ import scrapy
 from bs4 import BeautifulSoup
 from scrapy.crawler import CrawlerProcess
 
-
 DEFAULT_HTML_LABEL_PROPERTIES = {'slot': 'stat-label'}
 DEFAULT_HTML_VALUE_PROPERTIES = {'slot': 'stat-value'}
+
+META_PARAMETERS_TEAM_NAME = "Team Name"
+META_PARAMETERS_TEAM_URL = "Team URL"
+META_PARAMETERS_MATCH_RESULTS = "Match Results"
+META_PARAMETERS_TEAM_STATISTICS = "Team Statistics"
 
 
 def scrape_pie_chart(soup,
@@ -39,7 +43,6 @@ def scrape_label_value_pair(soup,
                             html_value_tag='div',
                             html_label_properties=None,
                             html_value_properties=None):
-
     # Use the default values if none are provided
     if html_label_properties is None:
         html_label_properties = DEFAULT_HTML_LABEL_PROPERTIES
@@ -92,20 +95,23 @@ def parse_team(response):
 
     full_stats_url = response.urljoin(team_stats_url)
 
-    yield scrapy.Request(full_stats_url, callback=parse_team_advanced,
-                         meta={'team_name': team_name,
-                               'team_url': team_url,
-                               'Match Results': match_results,
-                               'Team statistics': team_stats
-                               })
+    yield scrapy.Request(full_stats_url,
+                         callback=parse_team_advanced,
+                         meta=
+                         {
+                             META_PARAMETERS_TEAM_NAME: team_name,
+                             META_PARAMETERS_TEAM_URL: team_url,
+                             META_PARAMETERS_MATCH_RESULTS: match_results,
+                             META_PARAMETERS_TEAM_STATISTICS: team_stats
+                         })
 
 
 def parse_team_advanced(response):
-    team_name = response.meta['team_name']
-    team_url = response.meta['team_url']
+    team_name = response.meta[META_PARAMETERS_TEAM_NAME]
+    team_url = response.meta[META_PARAMETERS_TEAM_URL]
 
-    match_results = response.meta['Match Results']
-    team_stats = response.meta['Team statistics']
+    match_results = response.meta[META_PARAMETERS_MATCH_RESULTS]
+    team_stats = response.meta[META_PARAMETERS_TEAM_STATISTICS]
 
     html = response.text
     soup = BeautifulSoup(html, 'html.parser')
@@ -132,8 +138,8 @@ def parse_team_advanced(response):
     yield {
         'Team Name': team_name,
         'URL': team_url,
-        'Match Overview': match_results,
-        'Basic statistics': team_stats,
+        'Matches Overview': match_results,
+        'Basic Statistics': team_stats,
         'Advanced Statistics': advanced_stats
     }
 
