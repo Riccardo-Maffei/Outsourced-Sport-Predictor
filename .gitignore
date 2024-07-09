@@ -142,14 +142,12 @@ data_acquisition/fifa_datasets
 # Database
 *.db
 
-# Data from Kaggle
-/data_open/
+# Ignore everything in the Data Open folder but the README in the subdirectory
 
-# Do not ignore the specific subdirectory
-!data_open/Transfermarket
+/data_open/*
 
-# Ignore the contents of the specific subdirectory
-data_open/Transfermarket/
+!/data_open/Transfermarket
 
-# Do not ignore the Readme file in the specific subdirectory
-!data_open/Transfermarket/README
+/data_open/Transfermarket/*
+
+!/data_open/Transfermarket/README
