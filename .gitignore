@@ -144,3 +144,12 @@ data_acquisition/fifa_datasets
 
 # Data from Kaggle
 /data_open/
+
+# Do not ignore the specific subdirectory
+!data_open/Transfermarket
+
+# Ignore the contents of the specific subdirectory
+data_open/Transfermarket/
+
+# Do not ignore the Readme file in the specific subdirectory
+!data_open/Transfermarket/README
