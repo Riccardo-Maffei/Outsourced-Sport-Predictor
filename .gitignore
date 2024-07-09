@@ -136,7 +136,7 @@ data_acquisition/euro_datasets
 data_acquisition/fifa_datasets
 
 # Data from Kaggle
-data_open
+data_open/
 
 # Backup files
 *.bkp
