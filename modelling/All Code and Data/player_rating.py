@@ -2,63 +2,91 @@ import sqlite3
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from utils import DirectoryHandler
+from utils.LabelsHandler import *
+
+PLOTTING_ENABLED = False
+DECIMAL_PLACES = 5
+
+
+def plot_data(data_to_plot, data_label):
+    plt.hist(data_to_plot)
+    plt.title(data_label)
+    plt.show()
+
+
+def calculate_player_ratings(data_frame):
+    return (
+            + 2 * data_frame[NORMALIZED_GOAL_LABEL]
+            + data_frame[NORMALIZED_ASSIST_LABEL]
+            + data_frame[NORMALIZED_MINUTES_PLAYED]
+            - data_frame[NORMALIZED_YELLOW_CARD]
+            - 2 * data_frame[NORMALIZED_RED_CARD]
+    )
+
+
+def normalize_array(normalization_target):
+    min_value = normalization_target.min()
+    max_value = normalization_target.max()
+
+    return round((normalization_target - min_value) / (max_value - min_value), DECIMAL_PLACES)
+
+
+def calculate_column_average_and_normalize(column_name):
+    average_column = AVERAGE_LABEL_BUILDING_BLOCK + column_name
+    normalized_column = NORMALIZED_LABEL_BUILDING_BLOCK + column_name
+
+    temp_data[average_column] = round(data[column_name] / data[GAME_COUNT_LABEL], DECIMAL_PLACES)
+
+    # Normalize the average play time per game to the range [0, 1]
+    final_data[normalized_column] = normalize_array(temp_data[average_column])
+
+
 # Create a connection to the existing SQLite database
-conn = sqlite3.connect('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\transfermarket.db')
-cursor = conn.cursor()
+conn = sqlite3.connect(DirectoryHandler.PATH_TO_DB)
 
 # SQL query to join the tables and get the required data
 query = '''
-SELECT
-    player_id,
-    COUNT(player_id) as game_count,
-    SUM(yellow_cards) as yellow_card,
-    SUM(red_cards) as red_card,
-    SUM(goals) as goal,
-    SUM(assists) as assist,
-    SUM(minutes_played) as minutes_played
-FROM
-    appearances
-GROUP BY
-    player_id
-'''
+    SELECT
+        player_id,
+        COUNT(player_id) as game_count,
+        SUM(yellow_cards) as yellow_card,
+        SUM(red_cards) as red_card,
+        SUM(goals) as goal,
+        SUM(assists) as assist,
+        SUM(minutes_played) as minutes_played
+    FROM
+        appearances
+    GROUP BY
+        player_id
+    '''
 
 # Load the data into a DataFrame
 data = pd.read_sql_query(query, conn)
+temp_data = pd.DataFrame()
+
+final_data = pd.DataFrame()
+final_data[PLAYER_ID_LABEL] = data[PLAYER_ID_LABEL]
 
 # Close the database connection
 conn.close()
 
-def avreger(name):
-    avname = "ave_"+name
+columns_list = RELEVANT_QUERY_LABELS
 
-    data[avname] = round(data[name] / data['game_count'], 4)
+for column in columns_list:
+    calculate_column_average_and_normalize(column)
 
-    # Normalize the average play time per game to the range [0, 1]
-    min_value = data[avname].min()
-    max_value = data[avname].max()
-
-    nro_name = "normalized_" +name
-    data[nro_name] = (data[avname] - min_value) / (max_value - min_value)
-    data.drop(columns=[avname, name], inplace=True)
-
-
-collist = ["yellow_card", "red_card", "goal", "assist", "minutes_played"]
-
-for col in collist:
-    avreger(col)
-    datname = "normalized_"+col
-    #plt.hist(data[datname])
-    #plt.title(datname)
-    #plt.show() 
-
-data.drop(columns=["game_count"], inplace=True)
+    if PLOTTING_ENABLED:
+        column_label = NORMALIZED_LABEL_BUILDING_BLOCK + column
+        plot_data(temp_data[column_label], column_label)
 
 # Rating
-data["rating"] = - data["normalized_yellow_card"] - 2 * data["normalized_red_card"] + 2 * data["normalized_goal"] + data["normalized_assist"] + data["normalized_minutes_played"]
+data[RATING_LABEL] = calculate_player_ratings(final_data)
 
-data.drop(columns=["normalized_yellow_card","normalized_red_card", "normalized_goal", "normalized_assist", "normalized_minutes_played"], inplace=True)
+# Normalized rating
+final_data[NORMALIZED_RATING_LABEL] = normalize_array(data[RATING_LABEL])
 
-output_file = "C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\player_rating.csv"
 
-data.to_csv(output_file, index=False)
-
+# Save the DataFrame to CSV with all floating-point numbers formatted to 4 decimal places
+float_format = '%.4f'
+final_data.to_csv(DirectoryHandler.PATH_TO_PLAYER_RATING, index=False, float_format=float_format)

@@ -1,19 +1,15 @@
-import pandas as pd
 import sqlite3
+import pandas as pd
 
-BASE_PATH = '../../data_open/'
-DATA_BASE_SUBFOLDER = 'Transfermarket/'
-
-# Define the DataFrame variables
-DATA_FRAME_NAMES = ['clubs_df', 'club_games_df', 'competitions_df', 'games_df', 'game_events_df',
-                    'game_lineups_df', 'players_df', 'appearances_df', 'player_valuations_df']
-DATA_FRAME_PATHS = ['clubs.csv', 'club_games.csv', 'competitions.csv', 'games.csv', 'game_events.csv',
-                    'game_lineups.csv', 'players.csv', 'appearances.csv', 'player_valuations.csv']
+from utils import DirectoryHandler
+from utils.DirectoryHandler import calculate_path
+from utils.DataFramesHandler import *
 
 
-def calculate_path(parent_folder, file_name):
-    return parent_folder + file_name
+BASE_PATH = DirectoryHandler.BASE_PATH
+DATA_BASE_SUBFOLDER = DirectoryHandler.DATA_FRAMES_SUBFOLDER
 
+DATA_FRAME_PATHS = DirectoryHandler.DATA_FRAME_PATHS
 
 # Create a dictionary to hold the DataFrames
 data_frames = {}
@@ -22,22 +18,19 @@ data_frames = {}
 for name, path in zip(DATA_FRAME_NAMES, DATA_FRAME_PATHS):
     data_frames[name] = pd.read_csv(calculate_path(BASE_PATH + DATA_BASE_SUBFOLDER, path))
 
-
-clubs_df = data_frames['clubs_df']
-games_df = data_frames['games_df']
-players_df = data_frames['players_df']
-club_games_df = data_frames['club_games_df']
-appearances_df = data_frames['appearances_df']
-game_events_df = data_frames['game_events_df']
-competitions_df = data_frames['competitions_df']
-game_lineups_df = data_frames['game_lineups_df']
-player_valuations_df = data_frames['player_valuations_df']
-
+clubs_df = data_frames[CLUBS_DF]
+games_df = data_frames[GAMES_DF]
+players_df = data_frames[PLAYERS_DF]
+club_games_df = data_frames[CLUB_GAMES_DF]
+appearances_df = data_frames[APPEARANCES_DF]
+game_events_df = data_frames[GAME_EVENTS_DF]
+competitions_df = data_frames[COMPETITIONS_DF]
+game_lineups_df = data_frames[GAME_LINEUPS_DF]
+player_valuations_df = data_frames[PLAYER_VALUATIONS_DF]
 
 # Create a connection to the existing SQLite database
-conn = sqlite3.connect(calculate_path(BASE_PATH, 'transfermarket.db'))
+conn = sqlite3.connect(DirectoryHandler.PATH_TO_DB)
 cursor = conn.cursor()
-
 
 # Create the club_games table
 cursor.execute('''
@@ -242,16 +235,21 @@ CREATE TABLE IF NOT EXISTS clubs (
 )
 ''')
 
+
+def insert_data_in_tables(data_frame, sql_name):
+    data_frame.to_sql(sql_name, conn, if_exists='replace', index=False)
+
+
 # Insert data into the new tables
-club_games_df.to_sql('club_games', conn, if_exists='append', index=False)
-game_events_df.to_sql('game_events', conn, if_exists='append', index=False)
-games_df.to_sql('games', conn, if_exists='append', index=False)
-player_valuations_df.to_sql('player_valuations', conn, if_exists='append', index=False)
-players_df.to_sql('players', conn, if_exists='append', index=False)
-appearances_df.to_sql('appearances', conn, if_exists='append', index=False)
-game_lineups_df.to_sql('game_lineups', conn, if_exists='append', index=False)
-clubs_df.to_sql('clubs', conn, if_exists='append', index=False)
-competitions_df.to_sql('competitions', conn, if_exists='append', index=False)
+insert_data_in_tables(games_df, GAMES_DF)
+insert_data_in_tables(clubs_df, CLUBS_DF)
+insert_data_in_tables(players_df, PLAYERS_DF)
+insert_data_in_tables(club_games_df, CLUB_GAMES_DF)
+insert_data_in_tables(appearances_df, APPEARANCES_DF)
+insert_data_in_tables(game_events_df, GAME_EVENTS_DF)
+insert_data_in_tables(competitions_df, COMPETITIONS_DF)
+insert_data_in_tables(game_lineups_df, GAME_LINEUPS_DF)
+insert_data_in_tables(player_valuations_df, PLAYER_VALUATIONS_DF)
 
 # Commit the changes and close the connection
 conn.commit()

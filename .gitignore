@@ -135,8 +135,12 @@ dmypy.json
 data_acquisition/euro_datasets
 data_acquisition/fifa_datasets
 
+
 # Backup files
 *.bkp
 
 # Database
 *.db
+
+# Data from Kaggle
+/data_open/
