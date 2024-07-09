@@ -1,22 +1,43 @@
 import pandas as pd
 import sqlite3
 
+BASE_PATH = '../../data_open/'
+DATA_BASE_SUBFOLDER = 'Transfermarket/'
+
+# Define the DataFrame variables
+DATA_FRAME_NAMES = ['clubs_df', 'club_games_df', 'competitions_df', 'games_df', 'game_events_df',
+                    'game_lineups_df', 'players_df', 'appearances_df', 'player_valuations_df']
+DATA_FRAME_PATHS = ['clubs.csv', 'club_games.csv', 'competitions.csv', 'games.csv', 'game_events.csv',
+                    'game_lineups.csv', 'players.csv', 'appearances.csv', 'player_valuations.csv']
+
+
+def calculate_path(parent_folder, file_name):
+    return parent_folder + file_name
+
+
+# Create a dictionary to hold the DataFrames
+data_frames = {}
+
 # Load the CSV files (9)
-clubs_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\clubs.csv')
-competitions_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\competitions.csv')
-club_games_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\club_games.csv')
-game_events_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\game_events.csv')
-games_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\games.csv')
-player_valuations_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\player_valuations.csv')
-players_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\players.csv')
-appearances_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\appearances.csv')
-game_lineups_df = pd.read_csv('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\Transfermarket\\game_lineups.csv')
+for name, path in zip(DATA_FRAME_NAMES, DATA_FRAME_PATHS):
+    data_frames[name] = pd.read_csv(calculate_path(BASE_PATH + DATA_BASE_SUBFOLDER, path))
+
+
+clubs_df = data_frames['clubs_df']
+games_df = data_frames['games_df']
+players_df = data_frames['players_df']
+club_games_df = data_frames['club_games_df']
+appearances_df = data_frames['appearances_df']
+game_events_df = data_frames['game_events_df']
+competitions_df = data_frames['competitions_df']
+game_lineups_df = data_frames['game_lineups_df']
+player_valuations_df = data_frames['player_valuations_df']
+
 
 # Create a connection to the existing SQLite database
-conn = sqlite3.connect('C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\transfermarket.db')
+conn = sqlite3.connect(calculate_path(BASE_PATH, 'transfermarket.db'))
 cursor = conn.cursor()
 
-# Create the new tables with appropriate schema and relationships
 
 # Create the club_games table
 cursor.execute('''

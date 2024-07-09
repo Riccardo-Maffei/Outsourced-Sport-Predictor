@@ -137,3 +137,6 @@ data_acquisition/fifa_datasets
 
 # Backup files
 *.bkp
+
+# Database
+*.db
