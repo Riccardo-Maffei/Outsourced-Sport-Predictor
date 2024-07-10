@@ -1,12 +1,13 @@
 import pandas as pd
 import sqlite3
+from utils import DirectoryHandler
 
 # Load the CSV file
-file_path = 'C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\player_rating.csv'  # Update this path
+file_path = DirectoryHandler.PATH_TO_PLAYER_RATING
 player_ratings = pd.read_csv(file_path)
 
 # Connect to the SQLite database
-db_path = 'C:\\Users\\pd\\Documents\\ZHAW\\summer_school_data_science\\Project\\data_open\\transfermarket.db'
+db_path = DirectoryHandler.PATH_TO_DB
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
@@ -28,7 +29,7 @@ try:
 
     # Update the players table with the ratings from the CSV file
     for index, row in player_ratings.iterrows():
-        cursor.execute("UPDATE players SET rating = ? WHERE player_id = ?;", (row['rating'], row['player_id']))
+        cursor.execute("UPDATE players SET rating = ? WHERE player_id = ?;", (row['normalized_rating'], row['player_id']))
     
     conn.commit()
 
