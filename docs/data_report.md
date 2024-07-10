@@ -1,35 +1,87 @@
-# `Sample Project` - Data Report
-All information on the data used in the project is compiled in the data report in order to ensure the traceability and reproducibility of the results and to enable a systematic expansion of the database.
+# Outsourced Sport Predictor - Data Report
 
-Typically, in the exploratory analysis of the acquired raw data, quality and other issues are identified, which require pre-processing, merging of individual datasets and feature engineering into processed datasets. Therefore, this template provides a separate section for the processed data, which then serves as a starting point for the modelling activities. This needs to be adapted to the specific project requirements.
 
 ## Raw data
 ### Overview Raw Datasets
 | Name | Quelle | Storage location |
 |----------------|-----------------------------------------|--------------------------------------------------------------------------|
-| Dataset 1      | Name/short description of the data source | Link and/or short description of the location where the data is stored, e.g. accessible to the team |
-| Dataset 2      | …                                       | …                                                                        |
+| Main Dataset | A collection of club football games and player data scraped off [transfermarkt](https://www.transfermarkt.com/) by David Cariboo. | [This Dataset is stored here on kaggle](https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download) |
 
-### Details Dataset 1
-- Description of what information the dataset contains
-- Details of the data source/provider
-- Information on data procurement: description and possibly references to resources (download scripts, tools, online services, ...). Any new team member should be able to acquire the data indepentendently following these instructions.
-- Legal aspects of data use, licences, etc.
-- Data governance aspects: Categorisation of the data based on internal business requirements, e.g. public, business-relevant, personal
-- If applicable: categorisation into dependent (target variable, regressor) and independent (regressor) variables
-- ...
+### Main Dataset Details
+This dataset contains multiple .csv files, including the scores, venues, referees, players, and player positions played for over 60,000 club games and over 30,000 players' heights, dominant feet, birth dates, red card records, and yellow card records. The data set was scraped off the website transfermarkt weekly by David Cariboo and posted on the website Kaggle. Transfermarkt is a website dedicated to compiling data on football games and football players. Kaggle is a website dedicated to providing computer scientists with tools and data sets to work with. To download this data, head to [this website](https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download), and click on the download button at the top of the page. On Kaggle, the dataset is listed with a CC0 license, making it available for public use. 
 
-#### Data Catalogue
-The data catalogue basically represents an extended schema of a relational database.
+#### Data Catalog
 
+#### Appearances Table
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 | appearance_id | Text | Two groups of numbers seperated by an underscore, non-repeating | Numerical tag for identifying a unique appearance of a player  |
+| 2 |  player_id | Int | Min: 10 Max: 1.24 million  | Integer tag for identifying players across files  |
+| 3  | game_id  | Int  | Min: 10 Max: 1.24 million  |   |
+| 3  | game_id  |   |   |   |
+| 3  | game_id  |   |   |   |
+| 3  | game_id  |   |   |   |
+| 3  | game_id  |   |   |   |
+
+#### Club Games Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 |   |   |   |   |
 | 2 |   |   |   |   |
 |   |   |   |   |   |
 
+#### Clubs Table
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 |   |   |   |   |
+| 2 |   |   |   |   |
+|   |   |   |   |   |
 
-#### If applicable: Entity Relationship Diagram
+#### Competitions Table
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 |   |   |   |   |
+| 2 |   |   |   |   |
+|   |   |   |   |   |
+
+#### Game Events Table
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 |   |   |   |   |
+| 2 |   |   |   |   |
+|   |   |   |   |   |
+
+#### Game Lineups Table
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 |   |   |   |   |
+| 2 |   |   |   |   |
+|   |   |   |   |   |
+
+#### Games Table
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 |   |   |   |   |
+| 2 |   |   |   |   |
+|   |   |   |   |   |
+
+#### Player Valuations Table
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 |   |   |   |   |
+| 2 |   |   |   |   |
+|   |   |   |   |   |
+
+#### Players Table
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 |   |   |   |   |
+| 2 |   |   |   |   |
+|   |   |   |   |   |
+
+#### Entity Relationship Diagram
+
+![Screenshot 2024-07-09 130855](https://github.com/Riccardo-Maffei/Outsourced-Sport-Predictor/assets/174322968/b892c82b-9022-4ae9-b883-ceaa2a08f7b0)
 
 
 #### Data Quality
