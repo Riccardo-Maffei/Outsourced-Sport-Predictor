@@ -1,4 +1,4 @@
-BASE_PATH = '../../../data_open/'
+BASE_PATH = '../../data_open/'
 
 DATA_FRAMES_SUBFOLDER = 'Transfermarket/'
 
