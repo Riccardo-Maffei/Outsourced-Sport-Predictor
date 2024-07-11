@@ -57,7 +57,7 @@ When we collected the datasets to be used in the model, we ultimately wanted to 
         Project presentation : milestone, m2, 2024-07-11, 4m
 ```
 
-## Roles and Contact Details
+## Contact Details
 - **Harrison Waldon** - waldonh@mail.gvsu.edu
 - **Piotr Salustowicz** - saluspio@students.zhaw.ch
 - **Connor VanDrunen** - vandrunc@mail.gvsu.edu
