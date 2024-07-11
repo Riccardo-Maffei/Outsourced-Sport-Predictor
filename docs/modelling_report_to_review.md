@@ -40,7 +40,7 @@ The report should summarize the details of the modelling activities, e.g. machin
             - Batch size: 32
             - Epochs: 100
         - **Training and Validation:**
-            - The model was trained on a portion of the dataset, with validation performed using a separate portion to monitor performance and avoid overfitting.
+            - The model was trained on a portion of the dataset, with early stopping to monitor performance and avoid overfitting.
 
 - **Modeling Pipeline**
     This document describes the modeling pipeline based on the provided script. The pipeline consists of the following steps:
@@ -65,25 +65,29 @@ The report should summarize the details of the modelling activities, e.g. machin
 ## Model Performance
 
 - **Metrics Used to Evaluate Model Performance**
-    - Accuracy: Measures how often the model correctly predicts the number of goals.
-    - Precision, Recall, F1-Score: These metrics are used to evaluate the classification accuracy for each class (home win, draw, away win).
+    - Accuracy: Measures how often the model correctly predicts the win, loss, draw rate.
     - Mean Squared Error (MSE): Measures the average squared difference between the predicted and actual number of goals.
 
 - **Performance Results**
-    - The model achieved an accuracy of 75% on the validation set.
-    - Precision, recall, and F1-score for the 'home win' class were 0.80, 0.75, and 0.77, respectively.
-    - The Mean Squared Error on the validation set was 1.25.
+    - The best model achieved an accuracy of 46% on the test set.
+    - The Mean Squared Error on the test set was 0.47.
 
 ## Conclusion
 
 - **Summary of Key Findings**
-    - The neural network model demonstrated a good ability to predict the outcomes of soccer games based on the provided features.
-    - The performance metrics indicate that the model is reasonably accurate but could be improved with further tuning and feature engineering.
+    - The neural network model demonstrated a ability to predict the outcomes of soccer games based on the provided features.
+    - The performance metrics indicate that the model is reasonably accurate for the topic but could be improved with further input data, tuning and feature engineering.
 
 - **Potential Improvements**
     - Experimenting with different model architectures and hyperparameters.
     - Incorporating additional features, such as team form and player injuries.
     - Using more sophisticated techniques for handling categorical variables.
+
+## Literature
+- **Links to model/methods described**
+      - [Sequential Model](https://www.tensorflow.org/guide/keras/sequential_model)
+      - [Early Stopping](https://www.tensorflow.org/guide/migrate/early_stopping)
+      - [L2 Regularizer](https://www.tensorflow.org/api_docs/python/tf/keras/regularizers/L2)
 
 ## Appendices
 
@@ -112,3 +116,4 @@ The report should summarize the details of the modelling activities, e.g. machin
 - **Appendix D: References**
     - Data source: [Kaggle Dataset](https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download)
     - Libraries and frameworks: pandas, numpy, scikit-learn, TensorFlow, Keras
+
