@@ -122,20 +122,20 @@ To store this data in a database, we used the program SQLite.
 | 7 | referee | Text | Multiple Syntaxes: firstname lastname, lastname, title firstname lastname, firstname lastname1 lastname2  | Name of the referee during the given game (game_id) |
 | 8 | home_club_id | Integer | Min: 1 Max: 113,000 | Integer tag for identifying clubs across tables, in this case, specifically the home team |
 | 9 | away_club_id | Integer | Min: 2 Max: 113,000 | Integer tag for identifying clubs across tables, in this case, specifically the away team |
-| 10 |   |   |   |   |
-| 11 |   |   |   |   |
-| 12 |   |   |   |   |
-| 13 |   |   |   |   |
-| 14 |   |   |   |   |
-| 15 |   |   |   |   |
-| 16 |   |   |   |   |
-| 17 |   |   |   |   |
-| 18 |   |   |   |   |
-| 19 |   |   |   |   |
-| 20 |   |   |   |   |
-| 21 |   |   |   |   |
-| 22 |   |   |   |   |
-| 23 |   |   |   |   |
+| 10 | home_club_goals | Integer | Min: 0 Max: 15| Integer value storing the number of goals scored by the home team |
+| 11 | away_club_goals | Integer | Min: 0 Max: 19 | Integer value storing the number of goals scored by the away team |
+| 12 | home_club_position | Integer | Min: 1 Max: 21 | Integer value storing the rating of the home team |
+| 13 | away_club_position | Integer | Min: 1 Max: 21 | Integer value storing the rating of the away team |
+| 14 | home_club_manager_name | Text | General Syntax: firstname lastname | Name of the home team manager during the given game (game_id) |
+| 15 | away_club_manager_name | Text | General Syntax: firstname lastname  | Name of the away team manager during the given game (game_id) |
+| 16 | stadium | Text | General Syntax: words separated by spaces | Name of the stadium where the given game (game_id) took place |
+| 17 | url | Text | full website url required | Text storing the website where the data was scraped from |
+| 18 | home_club_formation | Text | All values null  | This should be the year the given club was formed, however, all values in this column are null |
+| 19 | away_club_formation | Text | All values null | This should be the year the given club was formed, however, all values in this column are null |
+| 20 | home_club_name | Text | General Syntax: words separated by spaces | Name of the home club in the given game |
+| 21 | away_club_name | Text | General Syntax: words separated by spaces | Name of the away club in the given game |
+| 22 | aggregate | Text | General Syntax: home_club_goals:away_club_goals | Score of the game written as a ratio |
+| 23 | competition_type | Text | Multiple words of text, with words separated by '_' | Text storing the general type of the given competition  |
 
 #### Player Valuations Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
@@ -149,30 +149,30 @@ To store this data in a database, we used the program SQLite.
 #### Players Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 |   |   |   |   |
-| 2 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
+| 1 | player_id | Integer | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
+| 2 | player_code | Text | General Syntax: multiple words of text, with words separated by '-'  | Text storing the player's name, seperated by '-' |
+| 3 | name | Text | General Syntax: firstname lastname or lastname | Name of the player with the given player_id |
+| 4 | position | Text | Categorical variables of text seperated by spaces | General title of the position the the given player (player_id) plays |
+| 5 | date_of_birth | Date | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
+| 6 | current_club_id | Integer | Min: 3 Max: 837,000 | Integer tag for identifying a player's current club ID across tables  |
+| 7 | agent_name | Text | General Syntax: multiple words of text seperated by spaces | Name of the agent company handling for the given player (player_id)  |
+| 8 | image_url | Text |   |   |
+| 9 | url | Text |   |   |
+| 10 | current_club_domestic_id | Text |   |   |
+| 11 | current_club_name | Text |   |   |
+| 12 | market_value_in_eur | Text |   |   |
+| 13 | highest_market_value_in_eur | Text |   |   |
+| 14 | first_name | Text |   |   |
+| 15 | last_name | Text |  |   |
+| 16 | last_season | Integer |   |   |
+| 17 | country_of_birth | Text |   |   |
+| 18 | city_of_birth | Text |   |   |
+| 19 | country_of_citizenship | Text |   |   |
+| 20 | sub_position | Text | Categorical variables of text seperated by spaces | Specific title of the position the the given player (player_id) plays |
+| 21 | foot | Text |   |   |
+| 22 | height_in_cm | Integer |   |   |
+| 23 | contract_expiration_date | Date |   |   |
+| 24 | raiting | Real |   |   |
 
 #### Entity Relationship Diagram
 
