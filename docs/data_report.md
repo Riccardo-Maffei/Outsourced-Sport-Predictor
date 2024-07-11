@@ -62,10 +62,10 @@ To store this data in a database, we used the program SQLite.
 | 11 | stadium_name | Text | Multiple syntaxes: words not seperated, words seperated by spaces, and words seperated by '-' | Text storing the name of the home stadium of the club |
 | 12 | stadium_seats | Integer | Min: 1312 Max: 81,400 | Integer value storing the number of seats in the home stadium of the club |
 | 13 | net_transfer_record | Text | Text starting with a '+' or '-', the local currency of the club, and a numerical value between -1.0 million and 99.4 million  | Text storing the total losses or gains made by the club through transfers |
-| 14 | coach_name | Text |   |   |
-| 15 | last_season | Integer |   |   |
-| 16 | filename | Text |   |   |
-| 17 | url | Text |   |   |
+| 14 | coach_name | Text | All values null | Text that should store the first and last name of the home club coach, however all values null |
+| 15 | last_season | Integer |  Min: 2012 Max: 2023 | Integer value storing the last recorded year the club played. |
+| 16 | filename | Text | all file names end with .json.gz  | Text storing the name of the file where the data in the table was found |
+| 17 | url | Text | full website url required | Text storing the website where the data was scraped from |
 
 #### Competitions Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
