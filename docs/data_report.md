@@ -117,7 +117,7 @@ To store this data in a database, we used the program SQLite.
 | 2 | date | Date | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
 | 3 | competition_id | Text | 3 to 4 letter abbreviation | Abbreviation tags storing the type of competition of the given game (game_id) to be used across tables |
 | 4 | season | Text | Years between 2012 and 2023 | Season the competition took place in by year |
-| 5 | round | Text | Categorical variables, text seperated by spaces | Name of the round that the given game (game_id) took place in |
+| 5 | round | Text | Categorical variables, text separated by spaces | Name of the round that the given game (game_id) took place in |
 | 6 | attendance | Integer | Min: 1 Max: 99,400 | Recorded attendance for the given game (game_id) |
 | 7 | referee | Text | Multiple Syntaxes: firstname lastname, lastname, title firstname lastname, firstname lastname1 lastname2  | Name of the referee during the given game (game_id) |
 | 8 | home_club_id | Integer | Min: 1 Max: 113,000 | Integer tag for identifying clubs across tables, in this case, specifically the home team |
@@ -150,16 +150,16 @@ To store this data in a database, we used the program SQLite.
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 | player_id | Integer | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
-| 2 | player_code | Text | General Syntax: multiple words of text, with words separated by '-'  | Text storing the player's name, seperated by '-' |
+| 2 | player_code | Text | General Syntax: multiple words of text, with words separated by '-'  | Text storing the player's name, separated by '-' |
 | 3 | name | Text | General Syntax: firstname lastname or lastname | Name of the player with the given player_id |
-| 4 | position | Text | Categorical variables of text seperated by spaces | General title of the position the the given player (player_id) plays |
+| 4 | position | Text | Categorical variables of text separated by spaces | General title of the position the the given player (player_id) plays |
 | 5 | date_of_birth | Date | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
 | 6 | current_club_id | Integer | Min: 3 Max: 837,000 | Integer tag for identifying a player's current club ID across tables  |
-| 7 | agent_name | Text | General Syntax: multiple words of text seperated by spaces | Name of the agent company handling for the given player (player_id)  |
-| 8 | image_url | Text |   |   |
-| 9 | url | Text |   |   |
-| 10 | current_club_domestic_id | Text |   |   |
-| 11 | current_club_name | Text |   |   |
+| 7 | agent_name | Text | General Syntax: multiple words of text separated by spaces | Name of the agent company of the given player (player_id)  |
+| 8 | image_url | Text | full website url required | Text storing a website where an image of the player is stored|
+| 9 | url | Text | full website url required | Text storing the website where the data was scraped from |
+| 10 | current_club_domestic_competition_id | Text | 2 to 4 letter abbreviation | Text storing the name of the domestic (local) competition that the given player's (player_id) most recent club competes in |
+| 11 | current_club_name | Text | General Syntax: multiple words of text separated by spaces | Text storing the name of the given player's (player_id) most recent club |
 | 12 | market_value_in_eur | Text |   |   |
 | 13 | highest_market_value_in_eur | Text |   |   |
 | 14 | first_name | Text |   |   |
@@ -168,11 +168,11 @@ To store this data in a database, we used the program SQLite.
 | 17 | country_of_birth | Text |   |   |
 | 18 | city_of_birth | Text |   |   |
 | 19 | country_of_citizenship | Text |   |   |
-| 20 | sub_position | Text | Categorical variables of text seperated by spaces | Specific title of the position the the given player (player_id) plays |
+| 20 | sub_position | Text | Categorical variables of text separated by spaces | Specific title of the position the the given player (player_id) plays |
 | 21 | foot | Text |   |   |
 | 22 | height_in_cm | Integer |   |   |
 | 23 | contract_expiration_date | Date |   |   |
-| 24 | raiting | Real |   |   |
+| 24 | rating | Real |   |   |
 
 #### Entity Relationship Diagram
 
@@ -181,7 +181,7 @@ To store this data in a database, we used the program SQLite.
 
 
 #### Data Quality
-In generak with this data, there were specific values that were missing 5% top 1% outliers, most cases drop or process it to include a mean or unknown
+In general, with this data, there were specific values that were missing 5% top 1% outliers, most cases drop or process it to include a mean or unknown
 
 ## Processed Data
 ### Overview Processed Datasets
