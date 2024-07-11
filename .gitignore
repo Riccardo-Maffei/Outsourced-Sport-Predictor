@@ -151,3 +151,4 @@ data_acquisition/fifa_datasets
 /data_open/Transfermarket/*
 
 !/data_open/Transfermarket/README
+!/data_open/Transfermarket/Data_Bank_Source.txt
