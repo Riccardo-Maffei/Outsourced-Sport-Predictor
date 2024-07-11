@@ -187,7 +187,7 @@ In general, with this data, there were specific values that were missing 5% top 
 ### Overview Processed Datasets
 | Name | Quelle | Storage location |
 |----------------|-----------------------------------------|--------------------------------------------------------------------------|
-|  | Name/short description of the data source | This data is obtainable by following the processing steps written in the README|                                              
+| data_modv6.csv | This set of data is a .csv file containing specific variables chosen and cleaned from our database | This data is obtainable by following the processing steps written in the README|                                              
 
 ### Details Processed Dataset 1
 - Description of what information the dataset contains
