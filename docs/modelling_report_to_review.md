@@ -100,17 +100,32 @@ The report should summarize the details of the modelling activities, e.g. machin
 
 - **Appendix C: Code Snippets**
     ```python
-    # Example of model definition in Keras
+    # Model example definition in Keras that was traind
     from tensorflow.keras.models import Sequential
     from tensorflow.keras.layers import Dense, Dropout
+    from tensorflow.keras.regularizers import l2
+    from tensorflow.keras.optimizers import Adam
 
-    model = Sequential()
-    model.add(Dense(128, input_dim=input_dim, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(64, activation='relu'))
-    model.add(Dense(2, activation='linear'))
+    activation = 'relu'
+    kernel_regularizer = l2(0.001)
+    loss = 'mean_squared_error'
+    optimizer = Adam(learning_rate=0.0001)
+    dropout = 0.3
     
-    model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
+    model = Sequential()
+    model.add(Dense(512, input_dim=X_train.shape[1], activation=activation, kernel_regularizer=kernel_regularizer))
+    model.add(Dropout(dropout))
+    model.add(Dense(256, activation=activation, kernel_regularizer=kernel_regularizer))
+    model.add(Dropout(dropout))
+    model.add(Dense(128, activation=activation, kernel_regularizer=kernel_regularizer))
+    model.add(Dropout(dropout))
+    model.add(Dense(64, activation=activation, kernel_regularizer=kernel_regularizer))
+    model.add(Dropout(dropout))
+    model.add(Dense(32, activation=activation, kernel_regularizer=kernel_regularizer))
+    model.add(Dense(2, dtype='float32'))  # Output layer for home and away goals
+
+    # Compile the model with a different learning rate
+    model.compile(optimizer=optimizer, loss=loss, metrics=['mae'])
     ```
 
 - **Appendix D: References**
