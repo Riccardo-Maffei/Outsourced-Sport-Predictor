@@ -1,5 +1,5 @@
 
-# `Sample Project` - Modelling Report
+# `Soccer Predictor` - Modelling Report
 
 The report should summarize the details of the modelling activities, e.g. machine learning experiments.
 
