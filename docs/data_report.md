@@ -16,17 +16,17 @@ This dataset contains multiple .csv files, including the scores, venues, referee
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 | appearance_id | Text | Two groups of numbers separated by an underscore, non-repeating | Numerical tag for identifying a unique appearance of a player  |
-| 2 |  player_id | Integer | Min: 10, Max: 1.24 million  | Integer tag for identifying players across tables  |
-| 3  | game_id  | Integer  | Min: 2.21 million, Max: 4.35 million  | Integer tag for identifying games across tables  |
-| 4  | player_club_id  | Integer  | Min: 1, Max: 102,000  | Integer tag for identifying a player's club ID in a given games across tables  |
-| 5  | player_current_club_id  | Int | Min: -1, Max: 837,000 | Integer tag for identifying a player's current club ID across tables  |
+| 2 |  player_id | Integer | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
+| 3  | game_id  | Integer  | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
+| 4  | player_club_id  | Integer  | Min: 1 Max: 102,000  | Integer tag for identifying a player's club ID in a given games across tables  |
+| 5  | player_current_club_id  | Int | Min: -1 Max: 837,000 | Integer tag for identifying a player's current club ID across tables  |
 | 6  | date  | Date  | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
 | 7  | player_name  | Text |  In syntax firstname lastname or lastname |  first and last name of the given player (player_id) if both names are available|
 | 8  | competition_id  | Text |  3 to 4 letter abbreviation |  Abbrevitation storing the type of competition of the given game (game_id) |
-| 9  | yellow_cards  | Integer | Min: 0, Max: 2  |  The amount of yellow cards the given player (player_id) recived in the given game (game_id) |
-| 10 | red_cards  | Integer | Min: 0, Max: 1 |  The amount of yellow cards the given player (player_id) recived in the given game (game_id) |
-| 11 | goals  | Integer | Min: 0, Max: 6  | The number of goals scored by the given player (player_id) in the given game (game_id)  |
-| 12 | asissts  | Integer | Min: 0, Max: 6  | The number of asissts from the given player (player_id) in the given game (game_id) |
+| 9  | yellow_cards  | Integer | Min: 0 Max: 2  |  The amount of yellow cards the given player (player_id) recived in the given game (game_id) |
+| 10 | red_cards  | Integer | Min: 0 Max: 1 |  The amount of yellow cards the given player (player_id) recived in the given game (game_id) |
+| 11 | goals  | Integer | Min: 0 Max: 6  | The number of goals scored by the given player (player_id) in the given game (game_id)  |
+| 12 | asissts  | Integer | Min: 0 Max: 6  | The number of asissts from the given player (player_id) in the given game (game_id) |
 | 13 | minutes_played  | Integer  | Min: 1 Max: 135  | The amount of time the given player (player_id) played in the given game (game_id) |
 
 #### Club Games Table
