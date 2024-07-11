@@ -58,7 +58,7 @@ The report should summarize the details of the modelling activities, e.g. machin
         7. **Model Evaluation**: Evaluate the model on the test set and calculate various metrics.
         8. **Hyperparameter Tuning**: Experiment with different hyperparameters (regularizers, activation functions, dropout values, optimizers, loss functions).
 
-        ## Graphical Representation
+        - **Graphical Representation**
 
         Data Loading -> Data Preprocessing -> Data Splitting -> Model Definition -> Model Compilation -> Model Training -> Model Evaluation -> Hyperparameter Tuning
 
