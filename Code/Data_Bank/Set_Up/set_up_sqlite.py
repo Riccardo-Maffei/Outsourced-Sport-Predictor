@@ -13,7 +13,7 @@ appearances_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/appearances
 game_lineups_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/game_lineups.csv')
 
 # Create a connection to the existing SQLite database
-conn = sqlite3.connect('../../../data_open/transfermarket.db')
+conn = sqlite3.connect('../../../Data/Data_Bank/transfermarket.db')
 cursor = conn.cursor()
 
 # Create the new tables with appropriate schema and relationships

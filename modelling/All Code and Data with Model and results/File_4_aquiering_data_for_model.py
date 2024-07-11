@@ -2,11 +2,11 @@ import pandas as pd
 import sqlite3
 
 # Load the CSV file
-file_path = "C:\\Users\\conno\\OneDrive\\Desktop\\Swiss Stuff\\Swiss Project\\archive\\player_rating.csv"  
+file_path = '../../Data/Data_Bank/player_rating.csv'
 player_ratings = pd.read_csv(file_path)
 
 # Connect to the SQLite database
-db_path = "C:\\Users\\conno\\OneDrive\\Desktop\\Swiss Stuff\\Swiss Project\\transfermarket.db"
+db_path = '../../Data/Data_Bank/transfermarket.db'
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 
