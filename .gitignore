@@ -146,9 +146,9 @@ data_acquisition/fifa_datasets
 
 /data_open/*
 
-!/data_open/Transfermarket
+!/Data/Data_Bank/Transfermarket
 
-/data_open/Transfermarket/*
+/Data/Data_Bank/Transfermarket/*
 
-!/data_open/Transfermarket/README
-!/data_open/Transfermarket/Data_Bank_Source.txt
+!/Data/Data_Bank/Transfermarket/README
+!/Data/Data_Bank/Transfermarket/Data_Bank_Source.txt

@@ -2,15 +2,15 @@ import pandas as pd
 import sqlite3
 
 # Load the CSV files (9)
-clubs_df = pd.read_csv('../../../data_open/Transfermarket/clubs.csv')
-competitions_df = pd.read_csv('../../../data_open/Transfermarket/competitions.csv')
-club_games_df = pd.read_csv('../../../data_open/Transfermarket/club_games.csv')
-game_events_df = pd.read_csv('../../../data_open/Transfermarket/game_events.csv')
-games_df = pd.read_csv('../../../data_open/Transfermarket/games.csv')
-player_valuations_df = pd.read_csv('../../../data_open/Transfermarket/player_valuations.csv')
-players_df = pd.read_csv('../../../data_open/Transfermarket/players.csv')
-appearances_df = pd.read_csv('../../../data_open/Transfermarket/appearances.csv')
-game_lineups_df = pd.read_csv('../../../data_open/Transfermarket/game_lineups.csv')
+clubs_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/clubs.csv')
+competitions_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/competitions.csv')
+club_games_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/club_games.csv')
+game_events_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/game_events.csv')
+games_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/games.csv')
+player_valuations_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/player_valuations.csv')
+players_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/players.csv')
+appearances_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/appearances.csv')
+game_lineups_df = pd.read_csv('../../../Data/Data_Bank/Transfermarket/game_lineups.csv')
 
 # Create a connection to the existing SQLite database
 conn = sqlite3.connect('../../../data_open/transfermarket.db')
