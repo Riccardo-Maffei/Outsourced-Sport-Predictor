@@ -85,9 +85,9 @@ The report should summarize the details of the modelling activities, e.g. machin
 
 ## Literature
 - **Links to model/methods described**
-      - [Sequential Model](https://www.tensorflow.org/guide/keras/sequential_model)
-      - [Early Stopping](https://www.tensorflow.org/guide/migrate/early_stopping)
-      - [L2 Regularizer](https://www.tensorflow.org/api_docs/python/tf/keras/regularizers/L2)
+    - [Sequential Model](https://www.tensorflow.org/guide/keras/sequential_model)
+    - [Early Stopping](https://www.tensorflow.org/guide/migrate/early_stopping)
+    - [L2 Regularizer](https://www.tensorflow.org/api_docs/python/tf/keras/regularizers/L2)
 
 ## Appendices
 
