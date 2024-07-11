@@ -1,3 +1,5 @@
+import random
+
 import tensorflow as tf
 import streamlit as st
 import DB_Calls
@@ -30,7 +32,11 @@ PLAYERS = DB_Calls.get_players()
 def predict_match_dummy(team1, team2):
     # Replace this with your actual model's prediction logic
     # For now, it's a dummy prediction
-    return f"{team1} vs {team2}: 1 - 0"
+
+    score_team_1 = random.randint(0, 3)
+    score_team_2 = random.randint(0, 3)
+
+    return f"{team1} vs {team2}: {score_team_1} - {score_team_2}"
 
 
 def predict_match():
