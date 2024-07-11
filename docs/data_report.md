@@ -15,10 +15,10 @@ This dataset contains multiple .csv files, including the scores, venues, referee
 #### Appearances Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 | appearance_id | Text | Two groups of numbers seperated by an underscore, non-repeating | Numerical tag for identifying a unique appearance of a player  |
-| 2 |  player_id | Int | Min: 10 Max: 1.24 million  | Integer tag for identifying players across files  |
-| 3  | game_id  | Int  | Min: 10 Max: 1.24 million  |   |
-| 3  | game_id  |   |   |   |
+| 1 | appearance_id | Text | Two groups of numbers separated by an underscore, non-repeating | Numerical tag for identifying a unique appearance of a player  |
+| 2 |  player_id | Int | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
+| 3  | game_id  | Int  | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
+| 3  | player_club_id  | Int  | Min: 1 Max: 102,000  | Integer tag for identifying club id in a given game for players across tables  |
 | 3  | game_id  |   |   |   |
 | 3  | game_id  |   |   |   |
 | 3  | game_id  |   |   |   |
