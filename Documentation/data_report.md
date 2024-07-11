@@ -160,19 +160,19 @@ To store this data in a database, we used the program SQLite.
 | 9 | url | Text | full website url required | Text storing the website where the data was scraped from |
 | 10 | current_club_domestic_competition_id | Text | 2 to 4 letter abbreviation | Text storing the name of the domestic (local) competition that the given player's (player_id) most recent club competes in |
 | 11 | current_club_name | Text | General Syntax: multiple words of text separated by spaces | Text storing the name of the given player's (player_id) most recent club |
-| 12 | market_value_in_eur | Text |   |   |
-| 13 | highest_market_value_in_eur | Text |   |   |
-| 14 | first_name | Text |   |   |
-| 15 | last_name | Text |  |   |
-| 16 | last_season | Integer |   |   |
-| 17 | country_of_birth | Text |   |   |
-| 18 | city_of_birth | Text |   |   |
-| 19 | country_of_citizenship | Text |   |   |
+| 12 | market_value_in_eur | Real | Min: 10000 Max: 180 million  | Real number storing the most recent market value of the club in Europe |
+| 13 | highest_market_value_in_eur | Real | Min: 10000 Max: 200 million  | Real number storing the highest market value of the club in Europe |
+| 14 | first_name | Text |  Single word string | Text value storing the first name of the current player (player_id) |
+| 15 | last_name | Text | Single and multiple word string separated by spaces| Text value storing the last name of the current player (player_id) |
+| 16 | last_season | Integer | Min: 2012 Max: 2023 | Integer value storing the last year that the given player (player_id) played in |
+| 17 | country_of_birth | Text | Multiple word string separated by spaces | Text storing the country where the given player (player_id) was born |
+| 18 | city_of_birth | Text | Multiple word string separated by spaces | Text storing the city where the given player (player_id) was born |
+| 19 | country_of_citizenship | Text | Multiple word string separated by spaces | Text storing the country that the given player (player_id) is a citizen of |
 | 20 | sub_position | Text | Categorical variables of text separated by spaces | Specific title of the position the the given player (player_id) plays |
-| 21 | foot | Text |   |   |
-| 22 | height_in_cm | Integer |   |   |
-| 23 | contract_expiration_date | Date |   |   |
-| 24 | rating | Real |   |   |
+| 21 | foot | Text |  Single word string | Text storing the dominant foot of the given player |
+| 22 | height_in_cm | Integer | Min: 18 Max: 207 | Integer value storing the height of the given player (player_id) in cm |
+| 23 | contract_expiration_date | Date | Special Date type with the syntax YYYY/MM/DD, majority of values null | Date value storing the contract expiration date of the given player (player_id)|
+| 24 | rating | Real | Min: 0 Max: 1 | Calculated rating for the given player (player_id) as a decimal value between 0 and 1 |
 
 #### Entity Relationship Diagram
 
@@ -187,8 +187,7 @@ In general, with this data, there were specific values that were missing 5% top 
 ### Overview Processed Datasets
 | Name | Quelle | Storage location |
 |----------------|-----------------------------------------|--------------------------------------------------------------------------|
-| Processed Dataset 1      | Name/short description of the data source | Link and/or short description of the location where the data is stored, e.g. accessible to the team |
-| Processed Dataset 2      | …                                       | …                                                                        |
+|  | Name/short description of the data source | This data is obtainable by following the processing steps written in the README|                                              
 
 ### Details Processed Dataset 1
 - Description of what information the dataset contains
