@@ -35,7 +35,7 @@ To store this data in a database, we used the program SQLite.
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 | game_id  | Integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
-| 2 | club_id  | Integer | Min: 1 Max: 113,000  | Integer tag for identifying clubs across tables |
+| 2 | club_id  | Integer | Min: 1 Max: 113,000  | Integer tag for identifying clubs across tables, in this case club_id specifically refers to the home team |
 | 3 | own_goals | Integer | Min: 0 Max: 19 | Integer value storing the number of goals scored by the home team |
 | 4 | own_position | Real | Min: 1 Max: 21  | Integer value storing the rating of the home team |
 | 5 | own_manager_name | Text | Syntax: firstname lastname or lastname | first and last name of the home club manager if both names are available |
@@ -49,65 +49,130 @@ To store this data in a database, we used the program SQLite.
 #### Clubs Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 | club_id |   |   |   |
+| 1 | club_id | Integer |   |   |
 | 2 | club_code |   |   |   |
 | 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
-| 3 | name |   |   |   |
+| 4 | domestic_competiton |   |   |   |
+| 5 | total_market_value |   |   |   |
+| 6 | squad_size |   |   |   |
+| 7 | average_age |   |   |   |
+| 8 | foreigners_number |   |   |   |
+| 9 | foreigners_percentage |   |   |   |
+| 10 | national_team_players |   |   |   |
+| 11 | stadium_name |   |   |   |
+| 12 | stadium_seats |   |   |   |
+| 13 | net_transfer_record |   |   |   |
+| 14 | coach_name |   |   |   |
+| 15 | last_season |   |   |   |
+| 16 | filename |   |   |   |
+| 17 | url |   |   |   |
 
 #### Competitions Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 |   |   |   |   |
 | 2 |   |   |   |   |
-|   |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
 
 #### Game Events Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 |   |   |   |   |
 | 2 |   |   |   |   |
-|   |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
 
 #### Game Lineups Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 |   |   |   |   |
 | 2 |   |   |   |   |
-|   |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
 
 #### Games Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 |   |   |   |   |
 | 2 |   |   |   |   |
-|   |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
 
 #### Player Valuations Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 |   |   |   |   |
 | 2 |   |   |   |   |
-|   |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
 
 #### Players Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 |   |   |   |   |
 | 2 |   |   |   |   |
-|   |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
+| 3 |   |   |   |   |
 
 #### Entity Relationship Diagram
 
