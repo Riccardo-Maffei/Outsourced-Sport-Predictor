@@ -37,11 +37,11 @@ To store this data in a database, we used the program SQLite.
 | 1 | game_id  | Integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
 | 2 | club_id  | Integer | Min: 1 Max: 113,000  | Integer tag for identifying clubs across tables, in this case club_id specifically refers to the home team |
 | 3 | own_goals | Integer | Min: 0 Max: 19 | Integer value storing the number of goals scored by the home team |
-| 4 | own_position | Real | Min: 1 Max: 21  | Integer value storing the rating of the home team |
+| 4 | own_position | Real | Min: 1.0 Max: 21.0  | Real value storing the rating of the home team |
 | 5 | own_manager_name | Text | Syntax: firstname lastname or lastname | first and last name of the home club manager if both names are available |
 | 6 | opponent_id | Integer | Min: 1 Max: 113,000 | Club Id for the away team |
 | 7 | opponent_goals | Integer | Min: 0 Max: 19 | Integer value storing the number of goals scored by the away team |
-| 8 | opponent_position | Real | Min: 1 Max: 21 | Integer value storing the rating of the away team |
+| 8 | opponent_position | Real | Min: 1.0 Max: 21.0 | Real value storing the rating of the away team |
 | 9 | opponent_manager_name | Text | Syntax: firstname lastname or lastname | first and last name of the away club manager if both names are available  |
 | 10 | hosting | Text | Categories: "home", "away" | Categorical variable stored as text of which team hosted the match |
 | 11 | is_win | Integer | Categories: 0, 1  | Categorical variable stored as an integer of whether or not the home team won (1) or lost (0) |
@@ -49,23 +49,23 @@ To store this data in a database, we used the program SQLite.
 #### Clubs Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 | club_id | Integer |   |   |
-| 2 | club_code |   |   |   |
-| 3 | name |   |   |   |
-| 4 | domestic_competiton |   |   |   |
-| 5 | total_market_value |   |   |   |
-| 6 | squad_size |   |   |   |
-| 7 | average_age |   |   |   |
-| 8 | foreigners_number |   |   |   |
-| 9 | foreigners_percentage |   |   |   |
-| 10 | national_team_players |   |   |   |
-| 11 | stadium_name |   |   |   |
-| 12 | stadium_seats |   |   |   |
-| 13 | net_transfer_record |   |   |   |
-| 14 | coach_name |   |   |   |
-| 15 | last_season |   |   |   |
-| 16 | filename |   |   |   |
-| 17 | url |   |   |   |
+| 1 | club_id | Integer | Min: 3 Max: 83,700 | Integer tag for identifying clubs across tables |
+| 2 | club_code | Text | Multiple words of text, with words seperated by '-' | Text storing a shortened version of the club name |
+| 3 | name | Text | Multiple words of text, with words seperated by spaces | Text storing the full version of the club name |
+| 4 | domestic_competiton | Text | 2 to 4 letter abbreviation | Text storing the name of the domestic (local) competition that the club competes in |
+| 5 | total_market_value | Integer | All values in this column are null | Integer value meant to store the total market value of the club team, however all values in this column are null |
+| 6 | squad_size | Integer | Min: 0 Max: 41 | Integer value that stores the number of players in the club team |
+| 7 | average_age | Real | Min: 18.3 Max: 29.3 | Real number that stores the average age of players in the club team |
+| 8 | foreigners_number | Integer | Min: 0 Max: 26 | Integer value that stores the number of foreigners on a given club team |
+| 9 | foreigners_percentage | Real | Min: 24.0 Max: 100.0 | Real number that stores the percentage of foreigners in a club team |
+| 10 | national_team_players | Integer | Min: 0 Max: 21 | Integer value that stores the number of players that also play for a national team in a given club team |
+| 11 | stadium_name | Text |   |   |
+| 12 | stadium_seats | Integer |   |   |
+| 13 | net_transfer_record | Text |   |   |
+| 14 | coach_name | Text |   |   |
+| 15 | last_season | Integer |   |   |
+| 16 | filename | Text |   |   |
+| 17 | url | Text |   |   |
 
 #### Competitions Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
