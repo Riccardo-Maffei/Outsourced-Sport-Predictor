@@ -2,7 +2,7 @@ import pandas as pd
 import json
 import re
 
-PATH_TO_JSON = 'crawling/crawlingProject/spiders/output.json'
+PATH_TO_JSON = '../Code/Outdated/EURO_Scraping/crawlingProject/spiders/output.json'
 
 PATH_TO_COMPLETE_CSV = 'DataTables/Complete Dataset.csv'
 PATH_TO_FILTERED_CSV = 'DataTables/Filtered Dataset.csv'

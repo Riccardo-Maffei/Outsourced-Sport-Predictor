@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 # Path to the chromedriver executable
-chrome_driver_path = r'../../../../chromedriver-win64/chromedriver-win64/chromedriver.exe'
+chrome_driver_path = r'../../../../../chromedriver-win64/chromedriver-win64/chromedriver.exe'
 
 # Set up the Selenium WebDriver
 options = webdriver.ChromeOptions()
