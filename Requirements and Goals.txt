@@ -1,0 +1,20 @@
+Required Data:
+
+- Stats for single players
+- Stats for entire team
+
+- Which team played
+- How long game lasted
+- Where was the game played
+- Ball ownership
+- Final Score
+
+- Weather conditions
+
+- Which players played
+- Which players scored
+
+Goals:
+
+- Win prediction with score
+- Which players have the highest probability of scoring

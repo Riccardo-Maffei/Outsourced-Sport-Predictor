@@ -1,19 +1,15 @@
-# `Sample Project` - Decision Log
-This protocol summarises the decisions from the evaluation of the data mining phase, which are made, for example, in a workshop together with the client and other stakeholders.
+# Outsourced Sport Predictor - Decision Log
 
-Decide:
-* Do results meet user needs?
-* Continuation of the project yes/no
-* Planning of the deployment
-* Carry out an additional data mining iteration
-    * Acquire more or different data
-    * Improvements in the modelling
-    * Address governance issues
-    * or ethical considerations
-    * ...
+## Initial Data Collection
+We first gathered data on the team results from the Euro and Nations League soccer tournaments. However, we collectively decided that we could not use this data because of how infrequent those tournaments occur, combined with how much the teams change from tournament to tournament. 
 
-Any presentation material created for such a workshop should also be stored in the `docs` folder.
+## Revised Data Collection
+We decided to collect data based on the composition of the teams - namely player information and statistics. The data for the players can be found in the transfermarket dataset, details of the data can be found in the data report.
 
-It is important to list who was involved in the decisions and when they were made.
+## Database Setup
+After we gathered all of the data we needed, we set up the database. 
 
-The structure and level of detail of this protocol should be tailored to the customs of the relevant organisation and the requirements of the decision-makers. It might include already a high level description of the envisioned product to be deployed.
+## Task Allocation
+After we set up the database, we decided to split up the work into training the data model and creating the visualization. 
+- **Piotr and Connor**: Worked on creating the model
+- **Riccardo and Harry**: Worked on setting up the visualization
