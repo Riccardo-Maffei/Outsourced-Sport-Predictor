@@ -30,9 +30,8 @@ We specifically wanted to focus on European soccer predictions, such that the sc
 When we collected the datasets to be used in the model, we ultimately wanted to see a correlation between the players/combinations of players on a team and the likelihood of that team winning a match. In other words, we wanted to see an association between the result of a match and the players that were participating on each side.
 
 ## Project Plan
-```mermaid
-gantt
-    title Gantt Diagram for Sports Prediction Model
+```gantt
+    Title: Gantt Diagram for Sports Prediction Model
     dateFormat 2024-07-01
     tickInterval 1day
     section Project Understanding
@@ -58,7 +57,7 @@ gantt
         Project presentation : milestone, m2, 2024-07-11, 4m
 ```
 
-## Roles and Contact Details
+## Contact Details
 - **Harrison Waldon** - waldonh@mail.gvsu.edu
 - **Piotr Salustowicz** - saluspio@students.zhaw.ch
 - **Connor VanDrunen** - vandrunc@mail.gvsu.edu

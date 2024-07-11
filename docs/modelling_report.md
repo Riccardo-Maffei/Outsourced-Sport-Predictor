@@ -43,9 +43,10 @@ The report should summarize the details of the modelling activities, e.g. machin
             - The model was trained on a portion of the dataset, with early stopping to monitor performance and avoid overfitting.
 
 - **Modeling Pipeline**
-    This document describes the modeling pipeline based on the provided script. The pipeline consists of the following steps:
+
+  The pipeline consists of the following steps:
         
-    1. **Data Loading**: Load the dataset from a specified path on Google Drive.
+    1. **Data Loading**: Load the prepared dataset.
     2. **Data Preprocessing**:
         - Identify numerical and categorical columns.
         - Define preprocessing steps for numerical data (StandardScaler).
