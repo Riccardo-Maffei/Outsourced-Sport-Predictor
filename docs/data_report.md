@@ -24,7 +24,7 @@ To store this data in a database, we used the program SQLite.
 | 5  | player_current_club_id  | Int | Min: -1 Max: 837,000 | Integer tag for identifying a player's current club ID across tables  |
 | 6  | date  | Date  | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
 | 7  | player_name  | Text |  In the syntax firstname lastname or lastname |  first and last name of the given player (player_id) if both names are available|
-| 8  | competition_id  | Text | 3 to 4 letter abbreviation | Abbreviation storing the type of competition of the given game (game_id) |
+| 8  | competition_id  | Text | 3 to 4 letter abbreviation | Abbreviation tags storing the type of competition of the given game (game_id) to be used across tables |
 | 9  | yellow_cards  | Integer | Min: 0 Max: 2  |  The amount of yellow cards the given player (player_id) received in the given game (game_id) |
 | 10 | red_cards  | Integer | Min: 0 Max: 1 |  The amount of yellow cards the given player (player_id) received in the given game (game_id) |
 | 11 | goals  | Integer | Min: 0 Max: 6  | The number of goals scored by the given player (player_id) in the given game (game_id)  |
@@ -35,7 +35,7 @@ To store this data in a database, we used the program SQLite.
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 | game_id  | Integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
-| 2 | club_id  | Integer | Min: 1 Max: 113,000  | Integer tag for identifying clubs across tables, in this case club_id specifically refers to the home team |
+| 2 | club_id  | Integer | Min: 1 Max: 113,000  | Integer tag for identifying clubs across tables, in this case, club_id specifically refers to the home team |
 | 3 | own_goals | Integer | Min: 0 Max: 19 | Integer value storing the number of goals scored by the home team |
 | 4 | own_position | Real | Min: 1.0 Max: 21.0  | Real value storing the rating of the home team |
 | 5 | own_manager_name | Text | Syntax: firstname lastname or lastname | first and last name of the home club manager if both names are available |
@@ -50,19 +50,19 @@ To store this data in a database, we used the program SQLite.
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 | club_id | Integer | Min: 3 Max: 83,700 | Integer tag for identifying clubs across tables |
-| 2 | club_code | Text | Multiple words of text, with words seperated by '-' | Text storing a shortened version of the club name |
-| 3 | name | Text | Multiple words of text, with words seperated by spaces | Text storing the full version of the club name |
+| 2 | club_code | Text | Multiple words of text, with words separated by '-' | Text storing a shortened version of the club name |
+| 3 | name | Text | Multiple words of text, with words separated  by spaces | Text storing the full version of the club name |
 | 4 | domestic_competiton | Text | 2 to 4 letter abbreviation | Text storing the name of the domestic (local) competition that the club competes in |
-| 5 | total_market_value | Integer | All values in this column are null | Integer value meant to store the total market value of the club team, however all values in this column are null |
+| 5 | total_market_value | Integer | All values in this column are null | Integer value meant to store the total market value of the club team, however, all values in this column are null |
 | 6 | squad_size | Integer | Min: 0 Max: 41 | Integer value that stores the number of players in the club team |
 | 7 | average_age | Real | Min: 18.3 Max: 29.3 | Real number that stores the average age of players in the club team |
 | 8 | foreigners_number | Integer | Min: 0 Max: 26 | Integer value that stores the number of foreigners on a given club team |
 | 9 | foreigners_percentage | Real | Min: 24.0 Max: 100.0 | Real number that stores the percentage of foreigners in a club team |
 | 10 | national_team_players | Integer | Min: 0 Max: 21 | Integer value that stores the number of players that also play for a national team in a given club team |
-| 11 | stadium_name | Text | Multiple syntaxes: words not seperated, words seperated by spaces, and words seperated by '-' | Text storing the name of the home stadium of the club |
+| 11 | stadium_name | Text | Multiple syntaxes: words not separated, words separated by spaces, and words separated by '-' | Text storing the name of the home stadium of the club |
 | 12 | stadium_seats | Integer | Min: 1312 Max: 81,400 | Integer value storing the number of seats in the home stadium of the club |
 | 13 | net_transfer_record | Text | Text starting with a '+' or '-', the local currency of the club, and a numerical value between -1.0 million and 99.4 million  | Text storing the total losses or gains made by the club through transfers |
-| 14 | coach_name | Text | All values null | Text that should store the first and last name of the home club coach, however all values null |
+| 14 | coach_name | Text | All values null | Text that should store the first and last name of the home club coach, however, all values null |
 | 15 | last_season | Integer |  Min: 2012 Max: 2023 | Integer value storing the last recorded year the club played. |
 | 16 | filename | Text | all file names end with .json.gz  | Text storing the name of the file where the data in the table was found |
 | 17 | url | Text | full website url required | Text storing the website where the data was scraped from |
@@ -70,17 +70,17 @@ To store this data in a database, we used the program SQLite.
 #### Competitions Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 |   |   |   |   |
-| 2 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
+| 1 | competition_id  | Text | 3 to 4 letter abbreviation | Abbreviation tags storing the type of competition of the given game (game_id) to be used across tables|
+| 2 | competition_code | Text | Multiple words of text, with words separated by '-' | Text storing a shortened version of the name of the given competition |
+| 3 | name | Text | Multiple words of text, with words separated by spaces | Text storing the full version of the given competition's name |
+| 4 | sub_type | Text | Multiple words of text, with words separated by '_' | Text storing the specific type of the given competition  |
+| 5 | type | Text | Multiple words of text, with words separated by '_' | Text storing the general type of the given competition  |
+| 6 | country_id | Integer | Min: -1 Max: 190 | Integer tag storing the country that the competition took place in |
+| 7 | country_name | Text | Multiple words of text, with words separated by spaces | Text storing the name of the country where the competition took place |
+| 8 | domestic_leauge_code | Text | 3 to 4 letter abbreviation or null | Text storing a code for identifying the type of domestic competitions and null for non-domestic competitions |
+| 9 | confederation | Text | Static Value: Europa | Static text value identifying the confederation in which the competition took place |
+| 10 | url | Text | full website url required | Text storing the website where the data was scraped from |
+| 11 | is_major_national_leauge | Text | Categorical Values: '0', '1' | Categorical values stating whether the competition is part of the major national league (1) or not (0) |
 
 #### Game Events Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
