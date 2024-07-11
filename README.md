@@ -148,7 +148,7 @@ and download the Databank. Place the .csv files that were contained into the zip
 
 In order to create your own model, execute Files 1 - 9, located under 
 
-"./Sports-Predictor/modelling/All Code and Data with Model and results".
+"Sports-Predictor/Code/Data_Bank_And_Model".
 
 
 [Back To Table of Contents](#table-of-contents)
@@ -159,7 +159,7 @@ In order to create your own model, execute Files 1 - 9, located under
 To start the web application, simply path to the directory where the application python file is located. 
 In this specific case, if not moved somewhere else by the user, the file is located under
 
-"./Sports-Predictor/GUI/".
+"./Sports-Predictor/Code/GUI/".
 
 Once located in the correct directory, run the streamlit_GUI file with StreamLit
 
