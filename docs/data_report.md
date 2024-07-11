@@ -37,14 +37,14 @@ To store this data in a database, we used the program SQLite.
 | 1 | game_id  | Integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
 | 2 | club_id  | Integer | Min: 1 Max: 113,000  | Integer tag for identifying clubs across tables |
 | 3 | own_goals | Integer | Min: 0 Max: 19 | Integer value storing the number of goals scored by the home team |
-| 4 | own_position | Real | Min: 1 Max: 21  | Integer value storing the raiting of the home team |
-| 5 | own_manager_name | Text |   |   |
-| 6 | opponent_id | Integer |   |   |
-| 7 | opponent_goals | Integer |   |   |
-| 8 | opponent_position | Real |   |   |
-| 9 | opponent_manager_name | Text |   |   |
-| 10 | hosting | Text |   |   |
-| 11 | is_win | Integer |   |   |
+| 4 | own_position | Real | Min: 1 Max: 21  | Integer value storing the rating of the home team |
+| 5 | own_manager_name | Text | Syntax: firstname lastname or lastname | first and last name of the home club manager if both names are available |
+| 6 | opponent_id | Integer | Min: 1 Max: 113,000 | Club Id for the away team |
+| 7 | opponent_goals | Integer | Min: 0 Max: 19 | Integer value storing the number of goals scored by the away team |
+| 8 | opponent_position | Real | Min: 1 Max: 21 | Integer value storing the rating of the away team |
+| 9 | opponent_manager_name | Text | Syntax: firstname lastname or lastname | first and last name of the away club manager if both names are available  |
+| 10 | hosting | Text | Categories: "home", "away" | Categorical variable stored as text of which team hosted the match |
+| 11 | is_win | Integer | Categories: 0, 1  | Categorical variable stored as an integer of whether or not the home team won (1) or lost (0) |
 
 #### Clubs Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
