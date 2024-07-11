@@ -127,3 +127,27 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDEA data
+.idea
+
+# Unpacked Datasets folders
+data_acquisition/euro_datasets
+data_acquisition/fifa_datasets
+
+
+# Backup files
+*.bkp
+
+# Database
+*.db
+
+# Ignore everything in the Data Open folder but the README in the subdirectory
+
+/data_open/*
+
+!/data_open/Transfermarket
+
+/data_open/Transfermarket/*
+
+!/data_open/Transfermarket/README
