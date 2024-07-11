@@ -3,7 +3,7 @@ The report should summarise the details of the modelling activities, e.g. machin
 
 ## Initial situation
 - Aim of the modelling
-    The primary aim of the modelling is to predict the outcome of a soccer game based on factors such as the location of the game, the referee, and the individual players on each team. This aligns with the Data Mining Goals specified in the project charter.
+    *The primary aim of the modelling is to predict the outcome of a soccer game based on factors such as the location of the game, the referee, and the individual players on each team. This aligns with the Data Mining Goals specified in the project charter.
 - Data set(s) and/or feature set used
     The dataset used in this project was acquired from the Kaggle website (https://www.kaggle.com/datasets/davidcariboo/player-scores?resource=download). This data was subsequently input into a database, from which we extracted the necessary information as described in the Data Report. The features include both numerical and categorical variables representing various aspects of soccer games. The target variables are 'home_club_goals' and 'away_club_goals'. For further information, please refer to the Data Report.
 - Description of the independent variables and the target variable
