@@ -42,25 +42,25 @@ The report should summarize the details of the modelling activities, e.g. machin
         - **Training and Validation:**
             - The model was trained on a portion of the dataset, with validation performed using a separate portion to monitor performance and avoid overfitting.
 
-    - **Modeling Pipeline**
-        This document describes the modeling pipeline based on the provided script. The pipeline consists of the following steps:
+- **Modeling Pipeline**
+    This document describes the modeling pipeline based on the provided script. The pipeline consists of the following steps:
         
-        1. **Data Loading**: Load the dataset from a specified path on Google Drive.
-        2. **Data Preprocessing**:
-            - Identify numerical and categorical columns.
-            - Define preprocessing steps for numerical data (StandardScaler).
-            - Define preprocessing steps for categorical data (OneHotEncoder).
-            - Combine preprocessing steps using `ColumnTransformer`.
-        3. **Data Splitting**: Split the data into training and testing sets.
-        4. **Model Definition**: Define a Keras Sequential model.
-        5. **Model Compilation**: Compile the model with specified loss functions and optimizers.
-        6. **Model Training**: Train the model using the training data with early stopping.
-        7. **Model Evaluation**: Evaluate the model on the test set and calculate various metrics.
-        8. **Hyperparameter Tuning**: Experiment with different hyperparameters (regularizers, activation functions, dropout values, optimizers, loss functions).
+    1. **Data Loading**: Load the dataset from a specified path on Google Drive.
+    2. **Data Preprocessing**:
+        - Identify numerical and categorical columns.
+        - Define preprocessing steps for numerical data (StandardScaler).
+        - Define preprocessing steps for categorical data (OneHotEncoder).
+        - Combine preprocessing steps using `ColumnTransformer`.
+    3. **Data Splitting**: Split the data into training and testing sets.
+    4. **Model Definition**: Define a Keras Sequential model.
+    5. **Model Compilation**: Compile the model with specified loss functions and optimizers.
+    6. **Model Training**: Train the model using the training data with early stopping.
+    7. **Model Evaluation**: Evaluate the model on the test set and calculate various metrics.
+    8. **Hyperparameter Tuning**: Experiment with different hyperparameters (regularizers, activation functions, dropout values, optimizers, loss functions).
 
-    - **Graphical Representation**
+- **Graphical Representation**
 
-        Data Loading -> Data Preprocessing -> Data Splitting -> Model Definition -> Model Compilation -> Model Training -> Model Evaluation -> Hyperparameter Tuning
+  Data Loading -> Data Preprocessing -> Data Splitting -> Model Definition -> Model Compilation -> Model Training -> Model Evaluation -> Hyperparameter Tuning
 
 ## Model Performance
 
