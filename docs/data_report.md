@@ -59,9 +59,9 @@ To store this data in a database, we used the program SQLite.
 | 8 | foreigners_number | Integer | Min: 0 Max: 26 | Integer value that stores the number of foreigners on a given club team |
 | 9 | foreigners_percentage | Real | Min: 24.0 Max: 100.0 | Real number that stores the percentage of foreigners in a club team |
 | 10 | national_team_players | Integer | Min: 0 Max: 21 | Integer value that stores the number of players that also play for a national team in a given club team |
-| 11 | stadium_name | Text |   |   |
-| 12 | stadium_seats | Integer |   |   |
-| 13 | net_transfer_record | Text |   |   |
+| 11 | stadium_name | Text | Multiple syntaxes: words not seperated, words seperated by spaces, and words seperated by '-' | Text storing the name of the home stadium of the club |
+| 12 | stadium_seats | Integer | Min: 1312 Max: 81,400 | Integer value storing the number of seats in the home stadium of the club |
+| 13 | net_transfer_record | Text | Text starting with a '+' or '-', the local currency of the club, and a numerical value between -1.0 million and 99.4 million  | Text storing the total losses or gains made by the club through transfers |
 | 14 | coach_name | Text |   |   |
 | 15 | last_season | Integer |   |   |
 | 16 | filename | Text |   |   |
