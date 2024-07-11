@@ -113,29 +113,29 @@ To store this data in a database, we used the program SQLite.
 #### Games Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 |   |   |   |   |
-| 2 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
+| 1 | game_id | Integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
+| 2 | date | Date | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
+| 3 | competition_id | Text | 3 to 4 letter abbreviation | Abbreviation tags storing the type of competition of the given game (game_id) to be used across tables |
+| 4 | season | Text | Years between 2012 and 2023 | Season the competition took place in by year |
+| 5 | round | Text | Categorical variables, text seperated by spaces | Name of the round that the given game (game_id) took place in |
+| 6 | attendance | Integer | Min: 1 Max: 99,400 | Recorded attendance for the given game (game_id) |
+| 7 | referee | Text | Multiple Syntaxes: firstname lastname, lastname, title firstname lastname, firstname lastname1 lastname2  | Name of the referee during the given game (game_id) |
+| 8 | home_club_id | Integer | Min: 1 Max: 113,000 | Integer tag for identifying clubs across tables, in this case, specifically the home team |
+| 9 | away_club_id | Integer | Min: 2 Max: 113,000 | Integer tag for identifying clubs across tables, in this case, specifically the away team |
+| 10 |   |   |   |   |
+| 11 |   |   |   |   |
+| 12 |   |   |   |   |
+| 13 |   |   |   |   |
+| 14 |   |   |   |   |
+| 15 |   |   |   |   |
+| 16 |   |   |   |   |
+| 17 |   |   |   |   |
+| 18 |   |   |   |   |
+| 19 |   |   |   |   |
+| 20 |   |   |   |   |
+| 21 |   |   |   |   |
+| 22 |   |   |   |   |
+| 23 |   |   |   |   |
 
 #### Player Valuations Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
