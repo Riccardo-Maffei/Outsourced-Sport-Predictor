@@ -16,12 +16,18 @@ This dataset contains multiple .csv files, including the scores, venues, referee
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
 | 1 | appearance_id | Text | Two groups of numbers separated by an underscore, non-repeating | Numerical tag for identifying a unique appearance of a player  |
-| 2 |  player_id | Int | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
-| 3  | game_id  | Int  | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
-| 3  | player_club_id  | Int  | Min: 1 Max: 102,000  | Integer tag for identifying club id in a given game for players across tables  |
-| 3  | game_id  |   |   |   |
-| 3  | game_id  |   |   |   |
-| 3  | game_id  |   |   |   |
+| 2 |  player_id | Integer | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
+| 3  | game_id  | Integer  | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
+| 4  | player_club_id  | Integer  | Min: 1 Max: 102,000  | Integer tag for identifying a player's club id in a given games across tables  |
+| 5  | player_current_club_id  | Int | Min: -1 Max: 837,000 | Integer tag for identifying a player's current club id across tables  |
+| 6  | date  | Date  |  Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
+| 7  | player_name  |  Text |  In syntax firstname lastname or lastname |  first and last name of the player stored in the player id (if both names are available)|
+| 8  | competition_id  |  Text |  3 to 4 letter abreviation |   |
+| 9  | game_id  |   |   |   |
+| 10 | game_id  |   |   |   |
+| 11 | game_id  |   |   |   |
+| 12 | game_id  |   |   |   |
+| 13 | game_id  |   |   |   |
 
 #### Club Games Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
@@ -85,7 +91,7 @@ This dataset contains multiple .csv files, including the scores, venues, referee
 
 
 #### Data Quality
-
+In generak with this data, there were specific values that were missing 5% top 1% outliers, most cases drop or process it to include a mean or unknown
 
 ## Processed Data
 ### Overview Processed Datasets
