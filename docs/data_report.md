@@ -49,9 +49,23 @@ To store this data in a database, we used the program SQLite.
 #### Clubs Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 |   |   |   |   |
-| 2 |   |   |   |   |
-|   |   |   |   |   |
+| 1 | club_id |   |   |   |
+| 2 | club_code |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
+| 3 | name |   |   |   |
 
 #### Competitions Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
@@ -97,7 +111,8 @@ To store this data in a database, we used the program SQLite.
 
 #### Entity Relationship Diagram
 
-![Screenshot 2024-07-09 130855](https://github.com/Riccardo-Maffei/Outsourced-Sport-Predictor/assets/174322968/b892c82b-9022-4ae9-b883-ceaa2a08f7b0)
+![data_base](https://github.com/Riccardo-Maffei/Outsourced-Sport-Predictor/assets/174322968/758d405d-242d-43c1-9d19-660d76040117)
+
 
 
 #### Data Quality
