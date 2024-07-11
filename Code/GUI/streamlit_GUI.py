@@ -12,7 +12,7 @@ def pack_in_object():
 
 
 EMPTY_FIELD = "Type here..."
-MODEL_PATH = "../models/test_model.keras"
+MODEL_PATH = "../../models/test_model.keras"
 
 PLAYER_COUNT = 18
 

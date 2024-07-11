@@ -3,7 +3,7 @@ import sqlite3
 
 
 # Connect to the SQLite database
-DB_PATH = "../Data/Data_Bank/transfermarket.db"
+DB_PATH = "../../Data/Data_Bank/transfermarket.db"
 
 
 def execute_SQLite_query(query_string):
