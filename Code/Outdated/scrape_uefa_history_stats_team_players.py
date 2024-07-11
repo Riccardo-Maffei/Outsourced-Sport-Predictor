@@ -13,7 +13,7 @@ options = Options()
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')
 
-PATH_TO_CHROMEDRIVER = '../../chromedriver-win64/chromedriver.exe'
+PATH_TO_CHROMEDRIVER = 'EURO_Scraping/chromedriver-win64/chromedriver.exe'
 
 service = Service(PATH_TO_CHROMEDRIVER)
 
