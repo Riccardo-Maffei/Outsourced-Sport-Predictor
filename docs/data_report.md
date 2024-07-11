@@ -12,7 +12,7 @@ This dataset contains multiple .csv files, including the scores, venues, referee
 
 #### Data Catalog
 
-To store this data ina a database, we used the program SQLite.
+To store this data in a database, we used the program SQLite.
 
 #### Appearances Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
@@ -24,7 +24,7 @@ To store this data ina a database, we used the program SQLite.
 | 5  | player_current_club_id  | Int | Min: -1 Max: 837,000 | Integer tag for identifying a player's current club ID across tables  |
 | 6  | date  | Date  | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
 | 7  | player_name  | Text |  In the syntax firstname lastname or lastname |  first and last name of the given player (player_id) if both names are available|
-| 8  | competition_id  | Text |  3 to 4 letter abbreviation |  Abbreviation  storing the type of competition of the given game (game_id) |
+| 8  | competition_id  | Text | 3 to 4 letter abbreviation | Abbreviation storing the type of competition of the given game (game_id) |
 | 9  | yellow_cards  | Integer | Min: 0 Max: 2  |  The amount of yellow cards the given player (player_id) received in the given game (game_id) |
 | 10 | red_cards  | Integer | Min: 0 Max: 1 |  The amount of yellow cards the given player (player_id) received in the given game (game_id) |
 | 11 | goals  | Integer | Min: 0 Max: 6  | The number of goals scored by the given player (player_id) in the given game (game_id)  |
@@ -34,17 +34,17 @@ To store this data ina a database, we used the program SQLite.
 #### Club Games Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 | game_id  | Integer |   |   |
-| 2 | club_id  | Integer |   |   |
-| 3 | own_goals | Integer |   |   |
-| 4 | own_position | Real |   |   |
+| 1 | game_id  | Integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
+| 2 | club_id  | Integer | Min: 1 Max: 113,000  | Integer tag for identifying clubs across tables |
+| 3 | own_goals | Integer | Min: 0 Max: 19 | Integer value storing the number of goals scored by the home team |
+| 4 | own_position | Real | Min: 1 Max: 21  | Integer value storing the raiting of the home team |
 | 5 | own_manager_name | Text |   |   |
-| 6 | opponent_id |   |   |   |
-| 7 | opponent_goals |   |   |   |
-| 8 | opponent_position |   |   |   |
-| 9 | opponent_manager_name |   |   |   |
-| 10 | hosting |   |   |   |
-| 11 | is_win |   |   |   |
+| 6 | opponent_id | Integer |   |   |
+| 7 | opponent_goals | Integer |   |   |
+| 8 | opponent_position | Real |   |   |
+| 9 | opponent_manager_name | Text |   |   |
+| 10 | hosting | Text |   |   |
+| 11 | is_win | Integer |   |   |
 
 #### Clubs Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
