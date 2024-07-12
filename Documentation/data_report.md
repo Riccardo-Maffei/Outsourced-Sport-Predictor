@@ -88,27 +88,27 @@ To store this data in a database, we used the program SQLite.
 | 1 | game_event_id | Text | One long string with a mixture of numbers and letters | Text tag to keep track of the game event across tables |
 | 2 |  date | Date | Special Date type with the syntax YYYY/MM/DD | Date that the event stored in the game_event_id was played  |
 | 3 | game_id | integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
-| 4 | minute | integer |   |   |
-| 5 | type | text |   |   |
-| 6 | club_id | integer |   |   |
-| 7 | player_id | integer |   |   |
-| 8 | description | text |   |   |
-| 9 | player_in_id | integer |   |   |
-| 10 | player_asisst_id | integer |   |   |
+| 4 | minute | integer | Min: -1 Max: 120  | The minute at which the given event occurred, with -1 for before the clock starts|
+| 5 | type | text | Categorical variable: 3 categories, each labeled with a one-word string  | Text storing the type of event that occurred |
+| 6 | club_id | Integer | Min: 3 Max: 83,700 | Integer tag for identifying clubs across tables |
+| 7 | player_id | integer | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
+| 8 | description | text |  Strings separated by spaces and commas | A short description of the event that occurred |
+| 9 | player_in_id | integer | Min: 10 Max: 1.24 million  | Integer tag for identifying the player id for the main player involved with the event  |
+| 10 | player_asisst_id | integer | | Min: 10 Max: 1.24 million  | Integer tag for identifying the player id for the player who helped assists involved with the event  |
 
 #### Game Lineups Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 |   |   |   |   |
-| 2 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
+| 1 | game_lineups-ID |Text | One long string with a mixture of numbers and letters | Text tag to keep track of the game lineups across tables |
+| 2 | date | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
+| 3 | game_id | Integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
+| 4 | club_id | Integer | Min: 1 Max: 113,000 | Integer tag for identifying clubs across tables |
+| 5 | player_id | Integer | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
+| 6 | player_name | Text |  In the syntax firstname lastname or lastname |  first and last name of the given player (player_id) if both names are available|
+| 7 | position | Text | Categorical variables of text separated by spaces | General title of the position the the given player (player_id) plays |
+| 8 | type |  Text |  Categorical variables of text separated by '_' | Stores if the player is on the starting lineup or a substitute |
+| 9 | number | Integer |  Min: 0 Max: 58 | Integer value that stores the given player's (player_id) jersey number  |
+| 10 | team_captain | Integer  | Min:0 Max:1  |  Categorical variable stating whether the given player is a team captain (1) or not (0) |
 
 #### Games Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
@@ -140,11 +140,11 @@ To store this data in a database, we used the program SQLite.
 #### Player Valuations Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 |   |   |   |   |
-| 2 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
+| 1 | player_id | Integer | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
+| 2 | date | Date | Special Date type with the syntax YYYY/MM/DD | Date that the valuation was calculated  |
+| 3 | market_value_in_eur | Real | Min: 10000 Max: 180 million  | Real number storing the most recent market value of the player in Europe |
+| 4 | current_club_id  | Int | Min: -1 Max: 837,000 | Integer tag for identifying a player's current club ID across tables 
+| 5 | player_club_domestic_competition_id | Text | 2 to 4 letter abbreviation | Text storing the name of the domestic (local) competition that the given player (player_id) competes in 
 
 #### Players Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
@@ -181,7 +181,7 @@ To store this data in a database, we used the program SQLite.
 
 
 #### Data Quality
-In general, with this data, there were specific values that were missing 5% top 1% outliers, most cases drop or process it to include a mean or unknown
+In general, this data was of very high quality as there were very few columns with a mixture of missing data and completed data, and the ones that were missing data were typically either entirely blank, allowing us to drop them, or had around 5% of the data missing, allowing us to easily fill in this values with means for numerical values or unknowns for categorical values. There were also very few static columns for us to drop.
 
 ## Processed Data
 ### Overview Processed Datasets
