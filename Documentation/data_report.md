@@ -152,7 +152,7 @@ To store this data in a database, we used the program SQLite.
 | 1 | player_id | Integer | Min: 10 Max: 1.24 million  | Integer tag for identifying players across tables  |
 | 2 | player_code | Text | General Syntax: multiple words of text, with words separated by '-'  | Text storing the player's name, separated by '-' |
 | 3 | name | Text | General Syntax: firstname lastname or lastname | Name of the player with the given player_id |
-| 4 | position | Text | Categorical variables of text separated by spaces | General title of the position the the given player (player_id) plays |
+| 4 | position | Text | Categorical variables of text separated by spaces | General title of the position the given player (player_id) plays |
 | 5 | date_of_birth | Date | Special Date type with the syntax YYYY/MM/DD | Date that the game stored in the game_id was played  |
 | 6 | current_club_id | Integer | Min: 3 Max: 837,000 | Integer tag for identifying a player's current club ID across tables  |
 | 7 | agent_name | Text | General Syntax: multiple words of text separated by spaces | Name of the agent company of the given player (player_id)  |
@@ -190,11 +190,302 @@ In general, this data was of very high quality as there were very few columns wi
 | data_modv6.csv | This set of data is a .csv file containing specific variables chosen and cleaned from our database | This data is obtainable by following the getting started section of the README|                                              
 
 ### Details Processed Dataset 1
-- Description of what information the dataset contains
-- Details and reasons for the processing steps -> Traceability and ensuring reproducibility
-- How can the data be accessed? Description, scripts, tools, ...
-- ...
+- The data set includes home scores, away scores, player data for each player on the tea, and a little bit of data on the game itself
+-Details about our processing steps can be found in the ReadMe
+-This data is accessed through a.csv, which has been shortened to include only the points we deemed important for our model
 
 #### Data Catalogue
 
-
+| Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
+|---|---|---|---|---|
+| 1 | home_club_goals | Integer | Min: 0 Max: 15| Integer value storing the number of goals scored by the home team |
+| 2 | away_club_goals | Integer | Min: 0 Max: 15| Integer value storing the number of goals scored by the away team |
+| 3 | referee | Text | Multiple Syntaxes: firstname lastname, lastname, title firstname lastname, firstname lastname1 lastname2  | Name of the referee during the given game (game_id) |
+| 4 | competition_type | Text | Multiple words of text, with words separated by '_' | Text storing the general type of the given competition  |
+| 5 | attendance | Integer | Min: 1 Max: 99,400 | Recorded attendance for the given game (game_id) |
+| 6 | home_type_1 | Text |  Categorical variables of text separated by '_' | Stores if home player 1 is on the starting lineup or a substitute |
+| 7 | home_position_1 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 1 plays |
+| 8 | home_position.1_1 | Text | Categorical variables of text separated by spaces | General title of the position home player 1 plays |
+| 9 | home__sub_position_1 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 1 plays |
+| 10 | home_foot_1 | Text |  Single word string | Text storing the dominant foot of home player 1  |
+| 11 | home_height_1 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 1 in cm |
+| 12 | home_rating_1 | Real | Min: 0 Max: 1 | Calculated rating home player 1 as a decimal value between 0 and 1 |
+| 13 | home_age_1 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 1 |
+| 14 | home_type_2 | Text |  Categorical variables of text separated by '_' | Stores if home player 2 is on the starting lineup or a substitute |
+| 15 | home_position_2 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 2 plays |
+| 16 | home_position.1_2 | Text | Categorical variables of text separated by spaces | General title of the position home player 2 plays |
+| 17 | home__sub_position_2 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 2 plays |
+| 18 | home_foot_2 | Text |  Single word string | Text storing the dominant foot of home player 2  |
+| 19 | home_height_2 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 2 in cm |
+| 20 | home_rating_2 | Real | Min: 0 Max: 1 | Calculated rating home player 2 as a decimal value between 0 and 1 |
+| 21 | home_age_2 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 2 |
+| 22 | home_type_3 | Text |  Categorical variables of text separated by '_' | Stores if home player 3 is on the starting lineup or a substitute |
+| 23 | home_position_3 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 3 plays |
+| 24 | home_position.1_3 | Text | Categorical variables of text separated by spaces | General title of the position home player 3 plays |
+| 25 | home__sub_position_3 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 3 plays |
+| 26 | home_foot_3 | Text |  Single word string | Text storing the dominant foot of home player 3  |
+| 27 | home_height_3 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 3 in cm |
+| 28 | home_rating_3 | Real | Min: 0 Max: 1 | Calculated rating home player 3 as a decimal value between 0 and 1 |
+| 29 | home_age_3 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 1 |
+| 30 | home_type_4 | Text |  Categorical variables of text separated by '_' | Stores if home player 4 is on the starting lineup or a substitute |
+| 31 | home_position_4 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 4 plays |
+| 32 | home_position.1_4 | Text | Categorical variables of text separated by spaces | General title of the position home player 4 plays |
+| 33 | home__sub_position_4 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 4 plays |
+| 34 | home_foot_4 | Text |  Single word string | Text storing the dominant foot of home player 4  |
+| 35 | home_height_4 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 4 in cm |
+| 36 | home_rating_4 | Real | Min: 0 Max: 1 | Calculated rating home player 4 as a decimal value between 0 and 1 |
+| 37 | home_age_4 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 4 |
+| 38 | home_type_5 | Text |  Categorical variables of text separated by '_' | Stores if home player 5 is on the starting lineup or a substitute |
+| 39 | home_position_5 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 5 plays |
+| 40 | home_position.1_5 | Text | Categorical variables of text separated by spaces | General title of the position home player 5 plays |
+| 41 | home__sub_position_5 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 5 plays |
+| 42 | home_foot_5 | Text |  Single word string | Text storing the dominant foot of home player 5  |
+| 43 | home_height_5 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 5 in cm |
+| 44 | home_rating_5 | Real | Min: 0 Max: 1 | Calculated rating home player 5 as a decimal value between 0 and 1 |
+| 45 | home_age_5 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 5 |
+| 46 | home_type_6 | Text |  Categorical variables of text separated by '_' | Stores if home player 6 is on the starting lineup or a substitute |
+| 47 | home_position_6 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 6 plays |
+| 48 | home_position.1_6 | Text | Categorical variables of text separated by spaces | General title of the position home player 6 plays |
+| 49 | home__sub_position_6 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 6 plays |
+| 50 | home_foot_6 | Text |  Single word string | Text storing the dominant foot of home player 6  |
+| 51 | home_height_6 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 6 in cm |
+| 52 | home_rating_6 | Real | Min: 0 Max: 1 | Calculated rating home player 6 as a decimal value between 0 and 1 |
+| 53 | home_age_6 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 6 |
+| 54 | home_type_7 | Text |  Categorical variables of text separated by '_' | Stores if home player 7 is on the starting lineup or a substitute |
+| 55 | home_position_7 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 7 plays |
+| 56 | home_position.1_7 | Text | Categorical variables of text separated by spaces | General title of the position home player 7 plays |
+| 57 | home__sub_position_7 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 7 plays |
+| 58 | home_foot_7 | Text |  Single word string | Text storing the dominant foot of home player 7  |
+| 59 | home_height_7 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 7 in cm |
+| 60 | home_rating_7 | Real | Min: 0 Max: 1 | Calculated rating home player 7 as a decimal value between 0 and 1 |
+| 61 | home_age_7 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 7 |
+| 62 | home_type_8 | Text |  Categorical variables of text separated by '_' | Stores if home player 8 is on the starting lineup or a substitute |
+| 63 | home_position_8 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 8 plays |
+| 64 | home_position.1_8 | Text | Categorical variables of text separated by spaces | General title of the position home player 8 plays |
+| 65 | home__sub_position_8 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 8 plays |
+| 66 | home_foot_8 | Text |  Single word string | Text storing the dominant foot of home player 8  |
+| 67 | home_height_8 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 8 in cm |
+| 68 | home_rating_8 | Real | Min: 0 Max: 1 | Calculated rating home player 8 as a decimal value between 0 and 1 |
+| 69 | home_age_8 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 8 |
+| 70 | home_type_9 | Text |  Categorical variables of text separated by '_' | Stores if home player 9 is on the starting lineup or a substitute |
+| 71 | home_position_9 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 9 plays |
+| 72 | home_position.1_9 | Text | Categorical variables of text separated by spaces | General title of the position home player 9 plays |
+| 73 | home__sub_position_9 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 9 plays |
+| 74 | home_foot_9 | Text |  Single word string | Text storing the dominant foot of home player 9  |
+| 75 | home_height_9 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 9 in cm |
+| 76 | home_rating_9 | Real | Min: 0 Max: 1 | Calculated rating home player 9 as a decimal value between 0 and 1 |
+| 77 | home_age_10 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 10 |
+| 6 | home_type_10 | Text |  Categorical variables of text separated by '_' | Stores if home player 10 is on the starting lineup or a substitute |
+| 7 | home_position_10 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 10 plays |
+| 8 | home_position.1_10 | Text | Categorical variables of text separated by spaces | General title of the position home player 10 plays |
+| 9 | home__sub_position_10 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 10 plays |
+| 10 | home_foot_10 | Text |  Single word string | Text storing the dominant foot of home player 10  |
+| 11 | home_height_10 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 10 in cm |
+| 12 | home_rating_10 | Real | Min: 0 Max: 1 | Calculated rating home player 10 as a decimal value between 0 and 1 |
+| 13 | home_age_10 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 10 |
+| 6 | home_type_11 | Text |  Categorical variables of text separated by '_' | Stores if home player 11 is on the starting lineup or a substitute |
+| 7 | home_position_11 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 11 plays |
+| 8 | home_position.1_11 | Text | Categorical variables of text separated by spaces | General title of the position home player 11 plays |
+| 9 | home__sub_position_11 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 11 plays |
+| 10 | home_foot_11 | Text |  Single word string | Text storing the dominant foot of home player 11  |
+| 11 | home_height_11 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 11 in cm |
+| 12 | home_rating_11 | Real | Min: 0 Max: 1 | Calculated rating home player 11 as a decimal value between 0 and 1 |
+| 13 | home_age_11 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 11 |
+| 14 | home_type_12 | Text |  Categorical variables of text separated by '_' | Stores if home player 12 is on the starting lineup or a substitute |
+| 15 | home_position_2 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 2 plays |
+| 16 | home_position.1_12 | Text | Categorical variables of text separated by spaces | General title of the position home player 12 plays |
+| 17 | home__sub_position_12 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 12 plays |
+| 18 | home_foot_12 | Text |  Single word string | Text storing the dominant foot of home player 12  |
+| 19 | home_height_12 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 12 in cm |
+| 20 | home_rating_12 | Real | Min: 0 Max: 1 | Calculated rating home player 12 as a decimal value between 0 and 1 |
+| 21 | home_age_12 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 12 |
+| 22 | home_type_13 | Text |  Categorical variables of text separated by '_' | Stores if home player 13 is on the starting lineup or a substitute |
+| 23 | home_position_13 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 13 plays |
+| 24 | home_position.1_13 | Text | Categorical variables of text separated by spaces | General title of the position home player 13 plays |
+| 25 | home__sub_position_13 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 13 plays |
+| 26 | home_foot_13 | Text |  Single word string | Text storing the dominant foot of home player 13  |
+| 27 | home_height_13 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 13 in cm |
+| 28 | home_rating_13 | Real | Min: 0 Max: 1 | Calculated rating home player 13 as a decimal value between 0 and 1 |
+| 29 | home_age_13 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 13 |
+| 30 | home_type_14 | Text |  Categorical variables of text separated by '_' | Stores if home player 14 is on the starting lineup or a substitute |
+| 31 | home_position_14 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 14 plays |
+| 32 | home_position.1_14 | Text | Categorical variables of text separated by spaces | General title of the position home player 14 plays |
+| 33 | home__sub_position_14 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 14 plays |
+| 34 | home_foot_14 | Text |  Single word string | Text storing the dominant foot of home player 14  |
+| 35 | home_height_14 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 14 in cm |
+| 36 | home_rating_14 | Real | Min: 0 Max: 1 | Calculated rating home player 14 as a decimal value between 0 and 1 |
+| 37 | home_age_14 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 14 |
+| 38 | home_type_15 | Text |  Categorical variables of text separated by '_' | Stores if home player 15 is on the starting lineup or a substitute |
+| 39 | home_position_15 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 15 plays |
+| 40 | home_position.1_15 | Text | Categorical variables of text separated by spaces | General title of the position home player 15 plays |
+| 41 | home__sub_position_15 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 15 plays |
+| 42 | home_foot_15 | Text |  Single word string | Text storing the dominant foot of home player 15  |
+| 43 | home_height_15 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 15 in cm |
+| 44 | home_rating_15 | Real | Min: 0 Max: 1 | Calculated rating home player 15 as a decimal value between 0 and 1 |
+| 45 | home_age_15 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 15 |
+| 46 | home_type_16 | Text |  Categorical variables of text separated by '_' | Stores if home player 16 is on the starting lineup or a substitute |
+| 47 | home_position_16 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 16 plays |
+| 48 | home_position.1_16 | Text | Categorical variables of text separated by spaces | General title of the position home player 16 plays |
+| 49 | home__sub_position_16 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 16 plays |
+| 50 | home_foot_16 | Text |  Single word string | Text storing the dominant foot of home player 16  |
+| 51 | home_height_16 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 16 in cm |
+| 52 | home_rating_16 | Real | Min: 0 Max: 1 | Calculated rating home player 16 as a decimal value between 0 and 1 |
+| 53 | home_age_16 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 16 |
+| 54 | home_type_17 | Text |  Categorical variables of text separated by '_' | Stores if home player 17 is on the starting lineup or a substitute |
+| 55 | home_position_17 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 17 plays |
+| 56 | home_position.1_17 | Text | Categorical variables of text separated by spaces | General title of the position home player 17 plays |
+| 57 | home__sub_position_17 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 17 plays |
+| 58 | home_foot_17 | Text |  Single word string | Text storing the dominant foot of home player 17  |
+| 59 | home_height_17 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 17 in cm |
+| 60 | home_rating_17 | Real | Min: 0 Max: 1 | Calculated rating home player 17 as a decimal value between 0 and 1 |
+| 61 | home_age_17 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of home player 17 |
+| 62 | home_type_18 | Text |  Categorical variables of text separated by '_' | Stores if home player 18 is on the starting lineup or a substitute |
+| 63 | home_position_18 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 18 plays |
+| 64 | home_position.1_18 | Text | Categorical variables of text separated by spaces | General title of the position home player 18 plays |
+| 65 | home__sub_position_18 | Text | Categorical variables of text separated by spaces | Specific title of the position home player 18 plays |
+| 66 | home_foot_18 | Text |  Single word string | Text storing the dominant foot of home player 18  |
+| 67 | home_height_18 | Integer | Min: 18 Max: 207 | Integer value storing the height of home player 18 in cm |
+| 68 | home_rating_18 | Real | Min: 0 Max: 1 | Calculated rating home player 18 as a decimal value between 0 and 1 |
+| 6 | away_type_1 | Text |  Categorical variables of text separated by '_' | Stores if away player 1 is on the starting lineup or a substitute |
+| 7 | away_position_1 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 1 plays |
+| 8 | away_position.1_1 | Text | Categorical variables of text separated by spaces | General title of the position away player 1 plays |
+| 9 | away__sub_position_1 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 1 plays |
+| 10 | away_foot_1 | Text |  Single word string | Text storing the dominant foot of away player 1  |
+| 11 | away_height_1 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 1 in cm |
+| 12 | away_rating_1 | Real | Min: 0 Max: 1 | Calculated rating away player 1 as a decimal value between 0 and 1 |
+| 13 | away_age_1 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 1 |
+| 14 | away_type_2 | Text |  Categorical variables of text separated by '_' | Stores if away player 2 is on the starting lineup or a substitute |
+| 15 | away_position_2 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 2 plays |
+| 16 | away_position.1_2 | Text | Categorical variables of text separated by spaces | General title of the position away player 2 plays |
+| 17 | away__sub_position_2 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 2 plays |
+| 18 | away_foot_2 | Text |  Single word string | Text storing the dominant foot of away player 2  |
+| 19 | away_height_2 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 2 in cm |
+| 20 | away_rating_2 | Real | Min: 0 Max: 1 | Calculated rating away player 2 as a decimal value between 0 and 1 |
+| 21 | away_age_2 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 2 |
+| 22 | away_type_3 | Text |  Categorical variables of text separated by '_' | Stores if away player 3 is on the starting lineup or a substitute |
+| 23 | away_position_3 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 3 plays |
+| 24 | away_position.1_3 | Text | Categorical variables of text separated by spaces | General title of the position away player 3 plays |
+| 25 | away__sub_position_3 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 3 plays |
+| 26 | away_foot_3 | Text |  Single word string | Text storing the dominant foot of away player 3  |
+| 27 | away_height_3 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 3 in cm |
+| 28 | away_rating_3 | Real | Min: 0 Max: 1 | Calculated rating away player 3 as a decimal value between 0 and 1 |
+| 29 | away_age_3 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 1 |
+| 30 | away_type_4 | Text |  Categorical variables of text separated by '_' | Stores if away player 4 is on the starting lineup or a substitute |
+| 31 | away_position_4 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 4 plays |
+| 32 | away_position.1_4 | Text | Categorical variables of text separated by spaces | General title of the position away player 4 plays |
+| 33 | away__sub_position_4 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 4 plays |
+| 34 | away_foot_4 | Text |  Single word string | Text storing the dominant foot of away player 4  |
+| 35 | away_height_4 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 4 in cm |
+| 36 | away_rating_4 | Real | Min: 0 Max: 1 | Calculated rating away player 4 as a decimal value between 0 and 1 |
+| 37 | away_age_4 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 4 |
+| 38 | away_type_5 | Text |  Categorical variables of text separated by '_' | Stores if away player 5 is on the starting lineup or a substitute |
+| 39 | away_position_5 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 5 plays |
+| 40 | away_position.1_5 | Text | Categorical variables of text separated by spaces | General title of the position away player 5 plays |
+| 41 | away__sub_position_5 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 5 plays |
+| 42 | away_foot_5 | Text |  Single word string | Text storing the dominant foot of away player 5  |
+| 43 | away_height_5 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 5 in cm |
+| 44 | away_rating_5 | Real | Min: 0 Max: 1 | Calculated rating away player 5 as a decimal value between 0 and 1 |
+| 45 | away_age_5 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 5 |
+| 46 | away_type_6 | Text |  Categorical variables of text separated by '_' | Stores if away player 6 is on the starting lineup or a substitute |
+| 47 | away_position_6 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 6 plays |
+| 48 | away_position.1_6 | Text | Categorical variables of text separated by spaces | General title of the position away player 6 plays |
+| 49 | away__sub_position_6 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 6 plays |
+| 50 | away_foot_6 | Text |  Single word string | Text storing the dominant foot of away player 6  |
+| 51 | away_height_6 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 6 in cm |
+| 52 | away_rating_6 | Real | Min: 0 Max: 1 | Calculated rating away player 6 as a decimal value between 0 and 1 |
+| 53 | away_age_6 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 6 |
+| 54 | away_type_7 | Text |  Categorical variables of text separated by '_' | Stores if away player 7 is on the starting lineup or a substitute |
+| 55 | away_position_7 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 7 plays |
+| 56 | away_position.1_7 | Text | Categorical variables of text separated by spaces | General title of the position away player 7 plays |
+| 57 | away__sub_position_7 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 7 plays |
+| 58 | away_foot_7 | Text |  Single word string | Text storing the dominant foot of away player 7  |
+| 59 | away_height_7 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 7 in cm |
+| 60 | away_rating_7 | Real | Min: 0 Max: 1 | Calculated rating away player 7 as a decimal value between 0 and 1 |
+| 61 | away_age_7 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 7 |
+| 62 | away_type_8 | Text |  Categorical variables of text separated by '_' | Stores if away player 8 is on the starting lineup or a substitute |
+| 63 | away_position_8 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 8 plays |
+| 64 | away_position.1_8 | Text | Categorical variables of text separated by spaces | General title of the position away player 8 plays |
+| 65 | away__sub_position_8 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 8 plays |
+| 66 | away_foot_8 | Text |  Single word string | Text storing the dominant foot of away player 8  |
+| 67 | away_height_8 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 8 in cm |
+| 68 | away_rating_8 | Real | Min: 0 Max: 1 | Calculated rating away player 8 as a decimal value between 0 and 1 |
+| 69 | away_age_8 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 8 |
+| 70 | away_type_9 | Text |  Categorical variables of text separated by '_' | Stores if away player 9 is on the starting lineup or a substitute |
+| 71 | away_position_9 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 9 plays |
+| 72 | away_position.1_9 | Text | Categorical variables of text separated by spaces | General title of the position away player 9 plays |
+| 73 | away__sub_position_9 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 9 plays |
+| 74 | away_foot_9 | Text |  Single word string | Text storing the dominant foot of away player 9  |
+| 75 | away_height_9 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 9 in cm |
+| 76 | away_rating_9 | Real | Min: 0 Max: 1 | Calculated rating away player 9 as a decimal value between 0 and 1 |
+| 77 | away_age_10 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 10 |
+| 6 | away_type_10 | Text |  Categorical variables of text separated by '_' | Stores if away player 10 is on the starting lineup or a substitute |
+| 7 | away_position_10 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 10 plays |
+| 8 | away_position.1_10 | Text | Categorical variables of text separated by spaces | General title of the position away player 10 plays |
+| 9 | away__sub_position_10 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 10 plays |
+| 10 | away_foot_10 | Text |  Single word string | Text storing the dominant foot of away player 10  |
+| 11 | away_height_10 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 10 in cm |
+| 12 | away_rating_10 | Real | Min: 0 Max: 1 | Calculated rating away player 10 as a decimal value between 0 and 1 |
+| 13 | away_age_10 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 10 |
+| 6 | away_type_11 | Text |  Categorical variables of text separated by '_' | Stores if away player 11 is on the starting lineup or a substitute |
+| 7 | away_position_11 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 11 plays |
+| 8 | away_position.1_11 | Text | Categorical variables of text separated by spaces | General title of the position away player 11 plays |
+| 9 | away__sub_position_11 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 11 plays |
+| 10 | away_foot_11 | Text |  Single word string | Text storing the dominant foot of away player 11  |
+| 11 | away_height_11 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 11 in cm |
+| 12 | away_rating_11 | Real | Min: 0 Max: 1 | Calculated rating away player 11 as a decimal value between 0 and 1 |
+| 13 | away_age_11 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 11 |
+| 14 | away_type_12 | Text |  Categorical variables of text separated by '_' | Stores if away player 12 is on the starting lineup or a substitute |
+| 15 | away_position_2 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 2 plays |
+| 16 | away_position.1_12 | Text | Categorical variables of text separated by spaces | General title of the position away player 12 plays |
+| 17 | away__sub_position_12 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 12 plays |
+| 18 | away_foot_12 | Text |  Single word string | Text storing the dominant foot of away player 12  |
+| 19 | away_height_12 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 12 in cm |
+| 20 | away_rating_12 | Real | Min: 0 Max: 1 | Calculated rating away player 12 as a decimal value between 0 and 1 |
+| 21 | away_age_12 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 12 |
+| 22 | away_type_13 | Text |  Categorical variables of text separated by '_' | Stores if away player 13 is on the starting lineup or a substitute |
+| 23 | away_position_13 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 13 plays |
+| 24 | away_position.1_13 | Text | Categorical variables of text separated by spaces | General title of the position away player 13 plays |
+| 25 | away__sub_position_13 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 13 plays |
+| 26 | away_foot_13 | Text |  Single word string | Text storing the dominant foot of away player 13  |
+| 27 | away_height_13 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 13 in cm |
+| 28 | away_rating_13 | Real | Min: 0 Max: 1 | Calculated rating away player 13 as a decimal value between 0 and 1 |
+| 29 | away_age_13 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 13 |
+| 30 | away_type_14 | Text |  Categorical variables of text separated by '_' | Stores if away player 14 is on the starting lineup or a substitute |
+| 31 | away_position_14 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 14 plays |
+| 32 | away_position.1_14 | Text | Categorical variables of text separated by spaces | General title of the position away player 14 plays |
+| 33 | away__sub_position_14 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 14 plays |
+| 34 | away_foot_14 | Text |  Single word string | Text storing the dominant foot of away player 14  |
+| 35 | away_height_14 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 14 in cm |
+| 36 | away_rating_14 | Real | Min: 0 Max: 1 | Calculated rating away player 14 as a decimal value between 0 and 1 |
+| 37 | away_age_14 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 14 |
+| 38 | away_type_15 | Text |  Categorical variables of text separated by '_' | Stores if away player 15 is on the starting lineup or a substitute |
+| 39 | away_position_15 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 15 plays |
+| 40 | away_position.1_15 | Text | Categorical variables of text separated by spaces | General title of the position away player 15 plays |
+| 41 | away__sub_position_15 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 15 plays |
+| 42 | away_foot_15 | Text |  Single word string | Text storing the dominant foot of away player 15  |
+| 43 | away_height_15 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 15 in cm |
+| 44 | away_rating_15 | Real | Min: 0 Max: 1 | Calculated rating away player 15 as a decimal value between 0 and 1 |
+| 45 | away_age_15 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 15 |
+| 46 | away_type_16 | Text |  Categorical variables of text separated by '_' | Stores if away player 16 is on the starting lineup or a substitute |
+| 47 | away_position_16 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 16 plays |
+| 48 | away_position.1_16 | Text | Categorical variables of text separated by spaces | General title of the position away player 16 plays |
+| 49 | away__sub_position_16 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 16 plays |
+| 50 | away_foot_16 | Text |  Single word string | Text storing the dominant foot of away player 16  |
+| 51 | away_height_16 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 16 in cm |
+| 52 | away_rating_16 | Real | Min: 0 Max: 1 | Calculated rating away player 16 as a decimal value between 0 and 1 |
+| 53 | away_age_16 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 16 |
+| 54 | away_type_17 | Text |  Categorical variables of text separated by '_' | Stores if away player 17 is on the starting lineup or a substitute |
+| 55 | away_position_17 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 17 plays |
+| 56 | away_position.1_17 | Text | Categorical variables of text separated by spaces | General title of the position away player 17 plays |
+| 57 | away__sub_position_17 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 17 plays |
+| 58 | away_foot_17 | Text |  Single word string | Text storing the dominant foot of away player 17  |
+| 59 | away_height_17 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 17 in cm |
+| 60 | away_rating_17 | Real | Min: 0 Max: 1 | Calculated rating away player 17 as a decimal value between 0 and 1 |
+| 61 | away_age_17 | Integer | Min: 16 Max: 41 | Integer storing the calculated age of away player 17 |
+| 62 | away_type_18 | Text |  Categorical variables of text separated by '_' | Stores if away player 18 is on the starting lineup or a substitute |
+| 63 | away_position_18 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 18 plays |
+| 64 | away_position.1_18 | Text | Categorical variables of text separated by spaces | General title of the position away player 18 plays |
+| 65 | away__sub_position_18 | Text | Categorical variables of text separated by spaces | Specific title of the position away player 18 plays |
+| 66 | away_foot_18 | Text |  Single word string | Text storing the dominant foot of away player 18  |
+| 67 | away_height_18 | Integer | Min: 18 Max: 207 | Integer value storing the height of away player 18 in cm |
+| 68 | away_rating_18 | Real | Min: 0 Max: 1 | Calculated rating away player 18 as a decimal value between 0 and 1 |
