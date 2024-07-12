@@ -85,16 +85,16 @@ To store this data in a database, we used the program SQLite.
 #### Game Events Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
 |---|---|---|---|---|
-| 1 |   |   |   |   |
-| 2 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
-| 3 |   |   |   |   |
+| 1 | game_event_id | Text | One long string with a mixture of numbers and letters | Text tag to keep track of the game event across tables |
+| 2 |  date | Date | Special Date type with the syntax YYYY/MM/DD | Date that the event stored in the game_event_id was played  |
+| 3 | game_id | integer | Min: 2.21 million Max: 4.35 million  | Integer tag for identifying games across tables  |
+| 4 | minute | integer |   |   |
+| 5 | type | text |   |   |
+| 6 | club_id | integer |   |   |
+| 7 | player_id | integer |   |   |
+| 8 | description | text |   |   |
+| 9 | player_in_id | integer |   |   |
+| 10 | player_asisst_id | integer |   |   |
 
 #### Game Lineups Table
 | Column index | Column name |  Datatype | Values (Range, validation rules) | Short description |
@@ -187,7 +187,7 @@ In general, with this data, there were specific values that were missing 5% top 
 ### Overview Processed Datasets
 | Name | Quelle | Storage location |
 |----------------|-----------------------------------------|--------------------------------------------------------------------------|
-| data_modv6.csv | This set of data is a .csv file containing specific variables chosen and cleaned from our database | This data is obtainable by following the processing steps written in the README|                                              
+| data_modv6.csv | This set of data is a .csv file containing specific variables chosen and cleaned from our database | This data is obtainable by following the getting started section of the README|                                              
 
 ### Details Processed Dataset 1
 - Description of what information the dataset contains
@@ -198,8 +198,3 @@ In general, with this data, there were specific values that were missing 5% top 
 #### Data Catalogue
 
 
-#### If applicable: Entity Relationship Diagram
-
-
-### Details Processed Dataset 2
-...
